@@ -1,6 +1,6 @@
 # Polarity Propagation Algorithm - Introduction
 
-This is the implementation two **polarity propagation algorithms** in Java. 
+This is the implementation of two **polarity propagation algorithms** in Java. 
 These algorithms allows us to classify a set of words as `positive`, `negative`
 and `neutral`.
 
