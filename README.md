@@ -1,26 +1,27 @@
 # Polarity Propagation Algorithm - Introduction
 
-This Java code implements two algorithms to propagate the �positive�, �negative�
-and �neutral� polarity of words over a graph of *synonyms* and *antonyms*.
+This Java code implements two algorithms to propagate the `positive`, `negative`
+and `neutral` polarity of words over a graph of *synonyms* and *antonyms*.
 
-The application can be run from the command line and through a Java API.
+The application can be run from the **command line** and through a **Java API**.
 In both cases it is required:
 
-- A set of words classified as �positive� and �negative� (and eventually as �neutral�);
+- A set of words classified as `positive` and `negative` (and optionally as `neutral`);
 - A graph of unclassified words. In this graph, a node represents a word and
-a edge represents a sysnonym or an antonymy between two words.
+a edge represents a **sysnonym** or an **antonymy** between two words.
 
-As output one gets the graph nodes classified as �positive�, �negative�, �neutral�,
-�ambiguous�, and �unknown�.
+As output one gets the graph nodes classified as `positive`, `negative`, `neutral`,
+`ambiguous`, and `unknown`.
 
-**EXAMPLE 1:**
+### EXAMPLE 1
 
-Suppose that we have the following graph of unclassified words (words without polarity).
-(This kind of graph can be build from a dictionary, a thesaurus, a wordnet, etc.
+Suppose that we collect from a dictionary, thesaurus or wordnet a bunch of words
+and their synonyms and antonyms. Then, we built the following graph. In this
+initial graph words are not classified with a polarity.
 
 ![tiny-undirected-graph-of-english-words](/test-resources/figures/ex01-undirected-graph-state-01.png)
 
-Them we classify a small set of these words as �positive�, �negative� and �neutral�.
+Them we classify a small set of these words as «positive», «negative» and «neutral».
 We call these words, seed words. In this case, we cassify `good` as **positive**, 
 `bad` as **negative**, and `common` as neutral.
 
@@ -106,12 +107,12 @@ csv.write(finalGraph);
 
 # Other Examples
 
-## Example - Propagating the �positive� and �negative� polarity over a tiny directed graph 
+## Example - Propagating the «positive» and «negative» polarity over a tiny directed graph 
 
 ![tiny-directed-graph-of-letters-epia](/test-resources/figures/tiny-directed-graph-of-letters-epia.png)
 
 This example shows how to call the method `propagate(...)` of the class `PolarityPropagation`,
-to propagate the �positive� and �negative� polarity of two words (A and B), over 
+to propagate the «positive» and «negative» polarity of two words (A and B), over 
 a <b>directed graph</b> of synonyms and antonymys (see the above graph).
 
 STEP 1:
@@ -152,12 +153,12 @@ based on the different relations (synonyms and antonyms) represented on the grap
 The full code can be seen in the file ExampleTinyDirectedGraph.java .
 
 
-## Example - Propagating the �positive�, �negative� and �neutral� polarity over a tiny undirected graph
+## Example - Propagating the «positive», «negative» and «neutral» polarity over a tiny undirected graph
 
 ![tiny-undirected-graph-of-numbers-propor](/test-resources/figures/tiny-undirected-graph-of-numbers-propor.png)
 
 This example shows how to call the method `propagate(...)` of the class `PolarityPropagation`,
-to propagate the �positive�, �negative� and polarity of three words (the words 0, 
+to propagate the «positive», «negative» and polarity of three words (the words 0, 
 1 and 2), over a <b>undirected graph</b> of synonyms (see the above graph).
 
 INPUT:
@@ -197,7 +198,7 @@ PolarityStats stats = new PolarityStats(finalGraph);
 System.out.println(stats);               
 ```
 
-## Example 3 - Propagating the �positive�, �negative� and �neutral� polarity over an undirected graph
+## Example 3 - Propagating the «positive», «negative» and «neutral» polarity over an undirected graph
 
 Example in Java (The full code can be seen in the file ExamplePapel.java):
 
@@ -218,7 +219,7 @@ seedWords.add((new Word("interessante")).setAsPositiveSeed());
 
 seedWords.add((new Word("feio")).setAsNegativeSeed());
 seedWords.add((new Word("conspurcado")).setAsNegativeSeed());
-seedWords.add((new Word("discrimina��o")).setAsNegativeSeed());
+seedWords.add((new Word("discriminação")).setAsNegativeSeed());
 seedWords.add((new Word("ruinosamente")).setAsNegativeSeed()); 
 seedWords.add((new Word("deploravelmente")).setAsNegativeSeed()); 
 seedWords.add((new Word("falsamente")).setAsNegativeSeed());
