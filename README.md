@@ -1,7 +1,8 @@
 # Polarity Propagation Algorithm - Introduction
 
-This Java code implements two algorithms to propagate the `positive`, `negative`
-and `neutral` polarity of words over a graph of *synonyms* and *antonyms*.
+This is the implementation two **polarity propagation algorithms** in Java. 
+These algorithms allows us to classify a set of words as `positive`, `negative`
+and `neutral`.
 
 The application can be run from the **command line** and through a **Java API**.
 In both cases it is required:
