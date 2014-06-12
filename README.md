@@ -3,7 +3,7 @@
 This Java code implements two algorithms to propagate the �positive�, �negative�
 and �neutral� polarity of words over a graph of *synonyms* and *antonyms*.
 
-The application can be run from the command line or through the Java API.
+The application can be run from the command line and through a Java API.
 In both cases it is required:
 
 - A set of words classified as �positive� and �negative� (and eventually as �neutral�);
