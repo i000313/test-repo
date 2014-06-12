@@ -1,4 +1,4 @@
-# Polarity Propagation Algorithm - Introduction
+# Introduction
 
 This is the implementation of two **polarity propagation algorithms** in Java. 
 These algorithms allows us to classify a set of words as `positive`, `negative`
@@ -16,22 +16,27 @@ As output one gets the graph nodes classified as `positive`, `negative`, `neutra
 
 ### EXAMPLE 1
 
-Suppose that we collect from a dictionary, thesaurus or wordnet a bunch of words
-and their synonyms and antonyms. Then, we built the following graph. In this
-initial graph words are not classified with a polarity.
+Suppose that we have collected from a dictionary, thesaurus or wordnet a bunch of 
+words with their synonyms and antonyms. Then, we built the following graph. In this
+initial graph words are not yet classified with a polarity.
 
 ![tiny-undirected-graph-of-english-words](/test-resources/figures/ex01-undirected-graph-state-01.png)
 
-Them we classify a small set of these words as «positive», «negative» and «neutral».
-We call these words, seed words. In this case, we cassify `good` as **positive**, 
-`bad` as **negative**, and `common` as neutral.
+Them, we manually classified the word `good` as **positive**, `bad` as **negative**, 
+and `common` as **neutral**.
 
 ![tiny-undirected-graph-of-english-words](/test-resources/figures/ex01-undirected-graph-state-02.png)
 
-Finally, we apply a propagation algorithm for propagating the polarity of the seed 
-words to the unclassified words.
+Finally, by applying a **polarity propagation algorithm**  we can automatically 
+classify the remaining words.
 
-# Calling the Application from the Command Line
+![tiny-undirected-graph-of-english-words](/test-resources/figures/ex01-undirected-graph-state-03.png)
+
+# Requirements
+
+- Java JDK or JRE 1.6 or higher
+
+# Command Line
 
 The application can be run from the command line, by running:
 
@@ -47,16 +52,22 @@ java -jar <path-to-the-application-jar> {mandatory-options} [optional-options]
 | -o <file_name> | optional   | Output file name
 | -e encoding    | optional   | Caracter encoding of all the files
 
-**EXAMPLE:**
+### EXAMPLE
 
-The example 1 shown above, can be reproduced by running:
+The above example, can be reproduced by running the following command line:
 
 ```
-java -jar <path-to-the-application-jar> -s "test-resources/example01-tiny-graph-english/seed-words-utf8.csv"
- -g "test-resources/example01-tiny-graph-english/graph-edges-utf8.txt" -e "utf-8"
+java -jar <path-to-the-application-jar> -s "test-resources/example01-tiny-graph-english/seed-words-utf8.csv" -g "test-resources/example01-tiny-graph-english/graph-edges-utf8.txt" -e "utf-8"
 ```
 
-The seed words file has the following content:
+This command will:
+- Read the `graph` from the file "test-resources/example01-tiny-graph-english/graph-edges-utf8.txt".
+- Read an initial set of words classified as positive, negativa and neutral from
+the file "test-resources/example01-tiny-graph-english/seed-words-utf8.csv".
+- Build an undirected graph, apply a propagation algorithm, and output a list of
+words with their polarity to a csv file.
+
+The inputted seed words file has the following content:
 
 ```
 good,1
@@ -64,7 +75,7 @@ bad,-1
 common,0
 ```
 
-A sample of the graph file content, is the following:
+A sample of the inputted graph file, is the following:
 
 ```
 good SYN firm
@@ -78,9 +89,36 @@ bad SYN bush-league
 bad SYN crummy
 ```
 
-# Calling the Application through the Java API
+A sample of the **outputted csv file**, is the following:
 
-The example 1 shown above, can be reproduced by calling:
+```
+words,polarity,negativeCounter,neutralCounter,positiveCounter,iteration
+good,+,0,0,1,0
+commonsense,+,1,0,0,1
+commonsensible,+,0,0,1,1
+commonsensical,+,0,0,1,1
+firm,+,0,0,1,1
+hard,+,0,0,1,1
+(...)
+well-founded,+,0,0,3,1
+groundless,-,1,0,0,1
+illogical,-,3,0,0,1
+invalid,-,3,0,0,1
+irrational,-,3,0,0,1
+(...)
+weak,-,2,0,0,2
+fairish,+,0,0,1,2
+serviceable,+,0,0,1,2
+deficient,-,1,0,0,2
+inadequate,-,1,0,0,2
+insufficient,-,1,0,0,2
+lacking,-,1,0,0,2
+```
+
+# Java API
+
+The application can be called through a Java API. The previous example, can 
+be reproduced by the following code:
 
 ```java
 // Read the graph from a file
@@ -108,53 +146,38 @@ csv.write(finalGraph);
 
 # Other Examples
 
-## Example - Propagating the «positive» and «negative» polarity over a tiny directed graph 
+### Example: Propagating the «positive» and «negative» polarity over a tiny directed graph 
+
+This example shows how to propagate the `positive` and `negative` polarity of two 
+words (A and B), over a **directed graph** of synonyms and antonymys.
+
+The graph is shown below on its initial state. 
+After applying a propagation algorithm, we get the graph on its final state.
 
 ![tiny-directed-graph-of-letters-epia](/test-resources/figures/tiny-directed-graph-of-letters-epia.png)
 
-This example shows how to call the method `propagate(...)` of the class `PolarityPropagation`,
-to propagate the «positive» and «negative» polarity of two words (A and B), over 
-a <b>directed graph</b> of synonyms and antonymys (see the above graph).
-
-STEP 1:
-- First we create a <b>directed graph</b> of synonyms and antonyms by calling the 
-method `createDirectedGraph()`. The created graph is shown in the above figure 
-on its <i>initial state</i>.
-
-STEP 2:
-- Then we label the word "A" as <i>positive</i> and the word "B" as <i>negative</i> 
-by calling the method `getSeedWords()`.
+The full code can be seen in the file [ExampleTinyDirectedGraph.java](src/pt/psantos/phd/polarity/propagation.examples/ExampleTinyDirectedGraph.java).
 
 ```java
 // Loads the example data
 ExampleTinyDirectedGraph exampleData = new ExampleTinyDirectedGraph();
 DirectedPseudograph<Word, LexicalRelation> initialGraph = exampleData.createDirectedGraph();
+// Get word "A" and word "B" labeled as positive and negative respectively
 List<Word> seedWords = exampleData.getSeedWords();
-```
 
-STEP 3:
-- We call the method `propagate(...)` of the class `PolarityPropagation`, passing 
-as parameters the graph `initialGraph` and the seed words `seedWords`.
-
-```
 // Applies the propagation algorithm over the directed graph
 DirectedPseudograph<Word, LexicalRelation> finalGraph 
 		= PolarityPropagation.propagate(initialGraph, seedWords);
 ```
 
 OUTPUT:
-- The graph shown in the above figure at the right hand side (the graph on the
-<i>final state</i>). On this final graph the words were labeled automatically 
-based on the different relations (synonyms and antonyms) represented on the graph. 
-<br/>In this graph, the words:
+<br/>The words:
 - A, C, F end up labeled as positive;
 - B, E, H, I end up labeled as negative;
 - D, G end up with an ambiguous polarity (they are simultaneously positive and negative).
 
-The full code can be seen in the file ExampleTinyDirectedGraph.java .
 
-
-## Example - Propagating the «positive», «negative» and «neutral» polarity over a tiny undirected graph
+### Example - Propagating the «positive», «negative» and «neutral» polarity over a tiny undirected graph
 
 ![tiny-undirected-graph-of-numbers-propor](/test-resources/figures/tiny-undirected-graph-of-numbers-propor.png)
 
@@ -199,7 +222,7 @@ PolarityStats stats = new PolarityStats(finalGraph);
 System.out.println(stats);               
 ```
 
-## Example 3 - Propagating the «positive», «negative» and «neutral» polarity over an undirected graph
+### Example 3 - Propagating the «positive», «negative» and «neutral» polarity over an undirected graph
 
 Example in Java (The full code can be seen in the file ExamplePapel.java):
 
