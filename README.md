@@ -66,13 +66,13 @@ The latter happens with all nodes that are not connected to a classified node.
 word greater the probability of that word being correctly classified.
 
 
-# <a name="requirements"></a>Requirements & Downlod
+# <a name="requirements"></a>Requirements & Download
 
 For running this application the following software must be installed:
 - `JRE (Java Runtime Environmen) 1.6` or higher;
 - Or `JDK (Java Development Kit)` 1.6 or higher.
 
-This application can be download [HERE](releases).
+This application can be download [HERE](/releases).
 
 
 # <a name="command-line"></a>Running in Command Line
