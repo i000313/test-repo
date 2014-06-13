@@ -55,11 +55,12 @@ classify the remaining words. The result is the following graph.
 ![tiny-undirected-graph-of-english-words](/docs/figures/ex01-undirected-graph-state-03.png)
 
 As shown above, the result is a list of words classified as `positive` (green nodes), 
-`negative` (red nodes), `neutral` (gray nodes).
+`negative` (red nodes), `neutral` (gray nodes). This list of words can be see also
+in the file [examples/01-tiny-graph-english/dic-output.csv](examples/01-tiny-graph-english/dic-output.csv).
 
 Some observations:
 - In some cases we can end up with words classified also as `ambiguous` 
-(words with more than one polarity and `unknown` (words with polarity not set). 
+(words with more than one polarity at same time) and `unknown` (words with polarity not set). 
 The latter happens with all nodes that are not connected to a classified node.
 - Generally, the smaller the distance between a non seed words and the closest seed 
 word greater the probability of that word being correctly classified.
