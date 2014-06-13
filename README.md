@@ -50,15 +50,15 @@ and **common** as `neutral`. This is shown in the following figure.
 ![tiny-undirected-graph-of-english-words](/docs/figures/ex01-undirected-graph-state-02.png)
 
 - Finally, by applying a **polarity propagation algorithm** we can automatically 
-classify the remaining words.
+classify the remaining words. The result is the following graph.
 
 ![tiny-undirected-graph-of-english-words](/docs/figures/ex01-undirected-graph-state-03.png)
 
-The result is a list of words classified as `positive` (green nodes), `negative`
-(red nodes), `neutral` (gray nodes).
+As shown above, the result is a list of words classified as `positive` (green nodes), 
+`negative` (red nodes), `neutral` (gray nodes).
 
 Some observations:
-- 
+- ddd
 
 # <a name="requirements"></a>Requirements
 
