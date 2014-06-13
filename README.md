@@ -14,22 +14,24 @@
  
 # <a name="intro"></a>Introduction
 
-This is the implementation of two **polarity propagation algorithms** in Java. 
-These algorithms allows us to classify a set of words as `positive`, `negative`
-and `neutral` starting with a small set of words.
+This is the implementation of two **polarity propagation algorithms** [[1]](#epia2011) 
+[[2]](#propor2011) in Java. 
+These algorithms allows us to classify a set of words, multiwords or synsets 
+as `positive`, `negative` and `neutral` starting with a small set of those items.
 
-The application can be run from the **command line** and through a **Java API**.
-In both cases it is required:
+This implementation can be run from the **command line** and through a **Java API**.
+In both cases it is required as input:
 
-- A set of words classified as `positive` and `negative` (and optionally as `neutral`);
+- **A set of seed items**. This is an initial set of *words*, *multiwords*, or *synsets* 
+classified as `positive` and `negative` (and optionally as `neutral`);
 - A graph of **sysnonyms** and **antonymys** (optional) words, multiwords or synsets.
 
-Then the application will output the words of the graph classified as `positive`, 
-`negative`, `neutral`, `ambiguous`, and `unknown`.
+The implementationoutput:
+- The items of the graph, classified as `positive`, `negative`, `neutral`, `ambiguous`, and `unknown`.
 
-### <a name="intro-example"></a>EXAMPLE 1
+### <a name="intro-example"></a>Example
 
-This example tries to explain the mentioned concepts. Suppose that our gool is 
+This example tries to explain the mentioned concepts. Suppose that our goal is 
 to classify a set of words as `positive`, `negative` and `neutral` with a few effort.
 
 First, we collect a bunch of words with their *synonyms* and *antonyms* from a 
@@ -49,6 +51,9 @@ Finally, by applying a **polarity propagation algorithm** we can automatically
 classify the remaining words.
 
 ![tiny-undirected-graph-of-english-words](/docs/figures/ex01-undirected-graph-state-03.png)
+
+Some observations:
+- 
 
 # <a name="requirements"></a>Requirements
 
