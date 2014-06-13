@@ -76,7 +76,8 @@ For running this application the following software must be installed:
 
 ### Download
 
-For downloading the last version click on the link `release` on the top of this page.
+The last version of this implementation can be download by clicking on the link `release`
+at the top of this page.
 
 # <a name="command-line"></a>Running in Command Line
 
@@ -103,8 +104,8 @@ classify a set of words as `positive`, `negative` and `neutral`.
 
 - First, we create a file with the word **good** classified as `positive`, **bad** 
 classified as `negative`, and the word **common** classified as `neutral`. 
-This file is saved as [examples/01-tiny-graph-english/seed-words-utf8.csv](examples/01-tiny-graph-english/seed-words-utf8.csv).
-File content:
+This file is available at [examples/01-tiny-graph-english/seed-words-utf8.csv](examples/01-tiny-graph-english/seed-words-utf8.csv) 
+and its content is shown below:
 
 ```
 good,1
@@ -112,8 +113,8 @@ bad,-1
 common,0
 ```
 
-- Then, we create a graph file and save it as [examples/01-tiny-graph-english/graph-edges-utf8.txt](examples/01-tiny-graph-english/graph-edges-utf8.txt). 
-Sample of this file:
+- Then, we create a file of graph edges. A sample of this file is shown below.
+The full file is available at [examples/01-tiny-graph-english/graph-edges-utf8.txt](examples/01-tiny-graph-english/graph-edges-utf8.txt). 
 
 ```
 good SYN firm
@@ -134,8 +135,8 @@ bad SYN crummy
 java -jar polarity-propagation-0.6.0.jar -s "examples/01-tiny-graph-english/seed-words-utf8.csv" -g "examples/01-tiny-graph-english/graph-edges-utf8.txt" -e "utf-8" -o "examples/01-tiny-graph-english/dic-output.csv"
 ```
 
-The application will output a list of words classified with their polarity, 
-to the file [examples/01-tiny-graph-english/dic-output.csv](examples/01-tiny-graph-english/dic-output.csv). 
+The result of the above command is a list of words classified with their polarity.
+This list of words is saved as[examples/01-tiny-graph-english/dic-output.csv](examples/01-tiny-graph-english/dic-output.csv). 
 A sample of the **outputted csv file**, is the following:
 
 ```
@@ -161,6 +162,12 @@ inadequate,-,1,0,0,2
 insufficient,-,1,0,0,2
 lacking,-,1,0,0,2
 ```
+
+Observations:
+- Running the application from the command line create always an `undirected graph`.
+This is what one wants most of the time because the synonyms and antonyms relations 
+are symmetric (e.g. if *good* is snynonym of *valid* then *valid* is synonym of *good*).
+For creating a directed graph one must use the Java API. 
 
 # <a name="java-api"></a>Running through the Java API
 
