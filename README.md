@@ -146,23 +146,23 @@ csv.write(finalGraph);
 
 # Other Examples
 
-### Example: Propagating the «positive» and «negative» polarity over a tiny directed graph 
+### Example: Tiny Directed Graph 
 
 This example shows how to propagate the `positive` and `negative` polarity of two 
-words (A and B), over a **directed graph** of synonyms and antonymys.
+seed "words" (A and B), over a tiny **directed graph** of synonyms and antonymys.
 
-The graph is shown below on its initial state. 
-After applying a propagation algorithm, we get the graph on its final state.
+The graph is shown below on its *initial state*. 
+After applying a propagation algorithm, we get the graph on its *final state*.
 
 ![tiny-directed-graph-of-letters-epia](/test-resources/figures/tiny-directed-graph-of-letters-epia.png)
 
-The full code can be seen in the file [ExampleTinyDirectedGraph.java](src/pt/psantos/phd/polarity/propagation.examples/ExampleTinyDirectedGraph.java).
+The full code can be seen in the file [ExampleTinyDirectedGraph.java](src/pt/psantos/phd/polarity/propagation/examples/ExampleTinyDirectedGraph.java#L149).
 
 ```java
 // Loads the example data
 ExampleTinyDirectedGraph exampleData = new ExampleTinyDirectedGraph();
 DirectedPseudograph<Word, LexicalRelation> initialGraph = exampleData.createDirectedGraph();
-// Get word "A" and word "B" labeled as positive and negative respectively
+// Get word "A" and "B" classified as positive and negative respectively
 List<Word> seedWords = exampleData.getSeedWords();
 
 // Applies the propagation algorithm over the directed graph
@@ -171,88 +171,30 @@ DirectedPseudograph<Word, LexicalRelation> finalGraph
 ```
 
 OUTPUT:
-<br/>The words:
-- A, C, F end up labeled as positive;
-- B, E, H, I end up labeled as negative;
-- D, G end up with an ambiguous polarity (they are simultaneously positive and negative).
 
+- Word A, C, F classified as positive;
+- Word B, E, H, I classified as negative;
+- Word D, G classified as ambiguous (they are simultaneously positive and negative).
 
-### Example - Propagating the «positive», «negative» and «neutral» polarity over a tiny undirected graph
+### Example - Tiny undirected graph
+
+This example shows how to propagate the `positive`, `negative` and `neutral` 
+polarity of the words `0, 1 and 2` over a tiny **undirected graph** of synonyms.
 
 ![tiny-undirected-graph-of-numbers-propor](/test-resources/figures/tiny-undirected-graph-of-numbers-propor.png)
 
-This example shows how to call the method `propagate(...)` of the class `PolarityPropagation`,
-to propagate the «positive», «negative» and polarity of three words (the words 0, 
-1 and 2), over a <b>undirected graph</b> of synonyms (see the above graph).
+INPUT (*initial state* in the above figure):
+- An *undirected graph* of synonyms;
+- Word `0` classified as `positive`, `1` calssified as `negative`, and
+word `2` classified as `neutral`.
 
-INPUT:
-- The <b>undirected graph</b> of synonyms created by calling the method `createUndirectedGraph()`. 
-This graph is shown in the above figure on its <i>initial state</i>;
-- The word "0" labeled as <i>positive</i>, "1" labeled as <i>negative</i>, and
-word "2" labeled as <i>neutral</i>.
+OUTPUT (*final state* in the above figure):
+- Word `0, 6, 8, 9, 10` classified as `positive`;
+- Word `1, 4` classified as `negative`;
+- Word `2, 3` classified as `neutral`;
+- Word `5, 7` classified as `ambiguous` (they are simultaneously positive and negative);
+- Word `11, 12` end up with `no polarity`.
 
-ALGORITM
-- We propagate the polarity of word 0, 1 and 2 to the unlabeled words, by appling a 
-propagation algorithm. 
+The full code can be seen in the file [ExampleTinyUndirectedGraph](src/pt/psantos/phd/polarity/propagation/examples/ExampleTinyUndirectedGraph.java).
 
-OUTPUT:
-- The graph shown in the above figure on the <i>final state</i>). 
-On this final graph the words were labeled automatically based on the different 
-relations (synonyms and antonyms) represented on the graph. 
-<br/>In this graph, the words:
- - 0, 6, 8, 9, 10 end up labeled as positive;
- - 1, 4 end up labeled as negative;
- - 2, 3 end up as neutral;
- - 5, 7 end up with an ambiguous polarity (they are simultaneously positive and negative);
- - 11, 12 end up with no polarity.
-
-Example in Java (The full code can be seen in the file ExampleTinyUndirectedGraph.java):
-
-```java
-// Loads the sample data.
-ExampleTinyUndirectedGraph exampleData = new ExampleTinyUndirectedGraph();
-SimpleGraph<Word, LexicalRelation> initialGraph = exampleData.createUndirectedGraph();
-List<Word> seedWords = exampleData.getSeedWords();
-
-// Applies the propagation algorithm over the undirected graph
-SimpleGraph<Word, LexicalRelation> finalGraph = PolarityPropagation.propagate(initialGraph, seedWords);
-
-// Compute and show a few statistics about the final graph
-PolarityStats stats = new PolarityStats(finalGraph);
-System.out.println(stats);               
-```
-
-### Example 3 - Propagating the «positive», «negative» and «neutral» polarity over an undirected graph
-
-Example in Java (The full code can be seen in the file ExamplePapel.java):
-
-```java
-// Get a graph from the PAPEL relations (a Portuguse resourse)
-PAPELLoader papelLoader = new PAPELLoader();
-SimpleGraph<Word, LexicalRelation> initialGraph 
-		= papelLoader.load(
-		 new File("test-resources/papel-2.0-relacoes_final_SINONIMIA-utf8.txt")
-		, "utf-8"
-		, POS.ADJECTIVE);
-
-// Choose the seed words
-List<Word> seedWords = new ArrayList<Word>(); 
-seedWords.add((new Word("bonito")).setAsPositiveSeed());
-seedWords.add((new Word("talento")).setAsPositiveSeed());
-seedWords.add((new Word("interessante")).setAsPositiveSeed());
-
-seedWords.add((new Word("feio")).setAsNegativeSeed());
-seedWords.add((new Word("conspurcado")).setAsNegativeSeed());
-seedWords.add((new Word("discriminação")).setAsNegativeSeed());
-seedWords.add((new Word("ruinosamente")).setAsNegativeSeed()); 
-seedWords.add((new Word("deploravelmente")).setAsNegativeSeed()); 
-seedWords.add((new Word("falsamente")).setAsNegativeSeed());
-
-// Propagate the polarity from the seed words to the remaining words
-SimpleGraph<Word, LexicalRelation> finalGraph = 
-	PolarityPropagation.propagate(initialGraph, seedWords);
-
-// Show some statistics about the final graph
-PolarityStats stats = new PolarityStats(finalGraph);
-System.out.println(stats);             
-```
+# References
