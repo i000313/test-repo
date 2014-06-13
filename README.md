@@ -1,17 +1,17 @@
 # Table of Contents
 - [Introduction](#intro)
- - EXAMPLE 1
-- Requirements
-- Runninf in Command Line
- - EXAMPLE
-- Running Through the Java API
-- Other Examples
- - Example: Tiny Directed Graph
- - Example: Tiny undirected graph
- - Example: Undirected graph of adjectives
-- References 
+ - [EXAMPLE 1](#into-example)
+- [Requirements](#requirements)
+- [Running in Command Line](#comand-line)
+ - [EXAMPLE](#comand-line-example)
+- [Running through the Java API](#java-api)
+- [Other Examples](#other-examples)
+ - [Example: Tiny Directed Graph](#other-examples-example1)
+ - [Example: Tiny undirected graph](#other-examples-example2)
+ - [Example: Undirected graph of adjectives](#other-examples-example3)
+- [References](#references) 
  
-# <a name="intro"><a>Introduction
+# <a name="intro"></a>Introduction
 
 This is the implementation of two **polarity propagation algorithms** in Java. 
 These algorithms allows us to classify a set of words as `positive`, `negative`
@@ -26,7 +26,7 @@ In both cases it is required:
 Then the application will output the words of the graph classified as `positive`, 
 `negative`, `neutral`, `ambiguous`, and `unknown`.
 
-### EXAMPLE 1
+### <a name="intro-example"></a>EXAMPLE 1
 
 This example tries to explain the mentioned concepts. Suppose that our gool is 
 to classify a set of words as `positive`, `negative` and `neutral` with a few effort.
@@ -49,13 +49,13 @@ classify the remaining words.
 
 ![tiny-undirected-graph-of-english-words](/docs/figures/ex01-undirected-graph-state-03.png)
 
-# Requirements
+# <a name="requirements"><a>Requirements
 
 For running the application the following software must be installed:
 - `JRE (Java Runtime Environmen) 1.6` or higher;
 - Or `JDK (Java Development Kit)` 1.6 or higher.
 
-# Runninf in Command Line
+# <a name="command-line"></a>Running in Command Line
 
 The application can be run from the command line, by running:
 
@@ -73,7 +73,7 @@ java -jar <path-to-the-application-jar> {mandatory-options} [optional-options]
 | -o &lt;file_name&gt; | optional   | Output file name
 | -e encoding    | optional   | Caracter encoding of all the files
 
-### EXAMPLE
+### <a name="command-line-example"></a>EXAMPLE
 
 This example, shows how to reproduce the previous example in the command line, to
 classify a set of words as `positive`, `negative` and `neutral`. 
@@ -139,7 +139,7 @@ insufficient,-,1,0,0,2
 lacking,-,1,0,0,2
 ```
 
-# Running Through the Java API
+# <a name="java-api"></a>Running through the Java API
 
 The application can be called through a Java API. The previous example and previous
 command line can be reproduced by the following Java code:
@@ -167,9 +167,9 @@ CsvOutput csv = new CsvOutput(new File("dic-output.csv"));
 csv.write(finalGraph);          
 ```
 
-# Other Examples
+# <a name="other-examples"></a>Other Examples
 
-### Example: Tiny Directed Graph 
+### <a name="other-examples-example1"></a>Example: Tiny Directed Graph 
 
 This example shows how to propagate the `positive` and `negative` over a tiny 
 **directed graph** of synonyms and antonymys. This graph is shown below. In this
@@ -189,7 +189,7 @@ The full Java code to reproduce this is example is available on
 This example is described in [[1]](#epia2011), on section **2.3 Intuitive and Simple 
 Polarity Propagation - Algorithm**.
 
-### Example: Tiny undirected graph
+### <a name="other-examples-example2"></a>Example: Tiny undirected graph
 
 This example shows how to propagate the `positive`, `negative` and `neutral` 
 polarity over a tiny **undirected graph** of synonyms. This graph is shown below. 
@@ -211,7 +211,7 @@ The full Java code to reproduce this is example is available on
 
 This example is described in [[2]](#propor2011), on section **3 The Polarity Propagation Algorithm**.
 
-## Example: Undirected graph of adjectives
+## <a name="other-examples-example3"></a>Example: Undirected graph of adjectives
 
 The full Java code to reproduce this is example is available on
 [ExamplePapel](src/pt/psantos/phd/polarity/propagation/examples/ExamplePapel.java).
@@ -219,7 +219,7 @@ The full Java code to reproduce this is example is available on
 This example shows how to create an **undirect graph of synonyms** for Portuguese 
 adjectives from [PAPEL](http://www.linguateca.pt/PAPEL/).
 
-# References
+# <a name="references"></a>References
 
 1. <a name="epia2011"></a>Santos, A. P., Ramos, C., & Marques, N. C. (2011). 
 [Determining the Polarity of Words through a Common Online Dictionary](http://www.psantos.com.pt/files/trabalhos-academicos/publicacoes/2011EPIA_polarityOfWordsThroughCommonDictionary.pdf). 
