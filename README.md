@@ -6,10 +6,11 @@
  - [Example](#command-line-example)
 - [Running through the Java API](#java-api)
 - [Other Examples](#other-examples)
- - [ExampleTinyDirectedGraph.java - Tiny Directed Graph](#other-examples-example1)
- - [ExampleTinyUndirectedGraph.java - Tiny undirected graph](#other-examples-example2)
- - [ExamplePapel.java - Undirected graph of adjectives](#other-examples-example3)
-- [References](#references) 
+ - [ExampleTinyDirectedGraph.java](#other-examples-example1)
+ - [ExampleTinyUndirectedGraph.java](#other-examples-example2)
+ - [ExamplePapel.java](#other-examples-example3)
+- [References](#references)
+- [License](#license)
  
 # <a name="intro"></a>Introduction
 
