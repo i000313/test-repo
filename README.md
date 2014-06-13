@@ -24,12 +24,12 @@ In both cases it is required as input:
 
 - **A set of seed items**. This is an initial set of *words*, *multiwords*, or *synsets* 
 classified as `positive` and `negative` (and optionally as `neutral`);
-- **A set of relations**. This is set of **sysnonyms** and **antonymys** (optional) 
-*words*, *multiwords* or *synsets*, that are used to build a graph.
+- **A set of relations between items**. This is set of **synonyms** and **antonymys** 
+(optional) *words*, *multiwords* or *synsets* that we want to classify. These 
+relations are used to build a graph.
 
 The implementation will output:
-- A list of items, classified as `positive`, `negative`, `neutral`, `ambiguous`, and `unknown`.
-These items are the *words*, *multiwords* or *synsets*.
+- A list of items classified as `positive`, `negative`, `neutral`, `ambiguous`, and `unknown`.
 
 ### <a name="intro-example"></a>Example
 
