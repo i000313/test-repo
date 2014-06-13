@@ -158,11 +158,11 @@ csv.write(finalGraph);
 
 ### Example: Tiny Directed Graph 
 
-This example shows how to propagate the `positive` and `negative` polarity of two 
-seed "words" (A and B), over a tiny **directed graph** of synonyms and antonymys.
+This example shows how to propagate the `positive` and `negative` over a tiny 
+**directed graph** of synonyms and antonymys. This graph is shown below. In this
+graph **A** is classified as `positive` and **B** as `negative` (graph on the *initial state*).
 
-The graph is shown below on its *initial state*. 
-After applying a propagation algorithm, we get the graph on its *final state*.
+After applying a propagation algorithm, we get the graph shown on its *final state*.
 
 ![tiny-directed-graph-of-letters-epia](/test-resources/figures/tiny-directed-graph-of-letters-epia.png)
 
