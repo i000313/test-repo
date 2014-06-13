@@ -1,7 +1,7 @@
 # Table of Contents
 - [Introduction](#intro)
  - [Example 1](#intro-example)
-- [Requirements](#requirements)
+- [Requirements & Download](#requirements)
 - [Running in Command Line](#command-line)
  - [Example](#command-line-example)
 - [Running through the Java API](#java-api)
@@ -68,12 +68,15 @@ word greater the probability of that word being correctly classified.
 
 # <a name="requirements"></a>Requirements & Download
 
+### Requirements
+
 For running this application the following software must be installed:
 - `JRE (Java Runtime Environmen) 1.6` or higher;
 - Or `JDK (Java Development Kit)` 1.6 or higher.
 
-This application can be download [HERE](/releases).
+### Download
 
+For downloading the last version click on the link `release` on the top of this page.
 
 # <a name="command-line"></a>Running in Command Line
 
