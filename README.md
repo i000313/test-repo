@@ -55,9 +55,9 @@ java -jar <path-to-the-application-jar> {mandatory-options} [optional-options]
 | Option         | Type 	  | Description
 | -------------- | ---------- | -----------
 | -h             | optional   | help
-| -s <file_name> | mandatory  | Seed words file name
-| -g <file_name> | mandatory  | Graph file name
-| -o <file_name> | optional   | Output file name
+| -s &lt;file_name&gt; | mandatory  | Seed words file name
+| -g &lt;file_name&gt; | mandatory  | Graph file name
+| -o &lt;file_name&gt; | optional   | Output file name
 | -e encoding    | optional   | Caracter encoding of all the files
 
 ### EXAMPLE
@@ -67,7 +67,7 @@ classify a set of words as `positive`, `negative` and `neutral`.
 
 1. We create a file with the word **good** classified as `positive`, **bad** 
 classified as `negative`, and the word **common** classified as `neutral`. 
-This file is saved as `test-resources/example01-tiny-graph-english/seed-words-utf8.csv`.
+This file is saved as `examples/01-tiny-graph-english/seed-words-utf8.csv`.
 File content:
 
 ```
@@ -76,7 +76,7 @@ bad,-1
 common,0
 ```
 
-2. We create a graph file and save it as `test-resources/example01-tiny-graph-english/graph-edges-utf8.txt`. 
+2. We create a graph file and save it as `examples/01-tiny-graph-english/graph-edges-utf8.txt`. 
 Sample of thhis file:
 
 ```
@@ -94,7 +94,7 @@ bad SYN crummy
 3. Run the following command line:
 
 ```
-java -jar polarity-propagation-0.6.0.jar -s "test-resources/example01-tiny-graph-english/seed-words-utf8.csv" -g "test-resources/example01-tiny-graph-english/graph-edges-utf8.txt" -e "utf-8" -o "dic.csv"
+java -jar polarity-propagation-0.6.0.jar -s "examples/01-tiny-graph-english/seed-words-utf8.csv" -g "examples/01-tiny-graph-english/graph-edges-utf8.txt" -e "utf-8" -o "dic.csv"
 ```
 
 4. The application will output a list of words classified with their polarity, 
@@ -135,13 +135,13 @@ command line can be reproduced by the following Java code:
 TriplesLoader loader = new TriplesLoader();
 SimpleGraph<Word, LexicalRelation> initialGraph 
 		= loader.load(
-		 new File("test-resources/example01-tiny-graph-english/graph-edges-utf8.txt")
+		 new File("examples/01-tiny-graph-english/graph-edges-utf8.txt")
 		, "utf-8");
 
 // Read the seed words from a file
 SeedWordsLoader seedWordsLoader = new SeedWordsLoader(); 
 List<Word> seedWords = seedWordsLoader.load(
-		 new File("test-resources/example01-tiny-graph-english/seed-words-utf8.csv")
+		 new File("examples/01-tiny-graph-english/seed-words-utf8.csv")
 		, "utf-8");
 
 // Propagate the polarity from the seed words to the remaining words
