@@ -2,13 +2,13 @@
 - [Introduction](#intro)
  - [EXAMPLE 1](#intro-example)
 - [Requirements](#requirements)
-- [Running in Command Line](#command_line)
- - [EXAMPLE](#command_line_example)
-- [Running through the Java API](#java_api)
-- [Other Examples](#other_examples)
- - [Example: Tiny Directed Graph](#other_examples_example1)
- - [Example: Tiny undirected graph](#other_examples_example2)
- - [Example: Undirected graph of adjectives](#other_examples_example3)
+- [Running in Command Line](#command-line)
+ - [EXAMPLE](#command-line-example)
+- [Running through the Java API](#java-api)
+- [Other Examples](#other-examples)
+ - [Example: Tiny Directed Graph](#other-examples-example1)
+ - [Example: Tiny undirected graph](#other-examples-example2)
+ - [Example: Undirected graph of adjectives](#other-examples-example3)
 - [References](#references) 
  
 # <a name="intro"></a>Introduction
@@ -55,7 +55,7 @@ For running the application the following software must be installed:
 - `JRE (Java Runtime Environmen) 1.6` or higher;
 - Or `JDK (Java Development Kit)` 1.6 or higher.
 
-# <a name="command_line"></a>Running in Command Line
+# <a name="command-line"></a>Running in Command Line
 
 The application can be run from the command line, by running:
 
@@ -73,7 +73,7 @@ java -jar <path-to-the-application-jar> {mandatory-options} [optional-options]
 | -o &lt;file_name&gt; | optional   | Output file name
 | -e encoding    | optional   | Caracter encoding of all the files
 
-### <a name="command_line_example"></a>EXAMPLE
+### <a name="command-line-example"></a>EXAMPLE
 
 This example, shows how to reproduce the previous example in the command line, to
 classify a set of words as `positive`, `negative` and `neutral`. 
@@ -139,7 +139,7 @@ insufficient,-,1,0,0,2
 lacking,-,1,0,0,2
 ```
 
-# <a name="java_api"></a>Running through the Java API
+# <a name="java-api"></a>Running through the Java API
 
 The application can be called through a Java API. The previous example and previous
 command line can be reproduced by the following Java code:
@@ -167,9 +167,9 @@ CsvOutput csv = new CsvOutput(new File("dic-output.csv"));
 csv.write(finalGraph);          
 ```
 
-# <a name="other_examples"></a>Other Examples
+# <a name="other-examples"></a>Other Examples
 
-### <a name="other_examples_example1"></a>Example: Tiny Directed Graph 
+### <a name="other-examples-example1"></a>Example: Tiny Directed Graph 
 
 This example shows how to propagate the `positive` and `negative` over a tiny 
 **directed graph** of synonyms and antonymys. This graph is shown below. In this
@@ -189,7 +189,7 @@ The full Java code to reproduce this is example is available on
 This example is described in [[1]](#epia2011), on section **2.3 Intuitive and Simple 
 Polarity Propagation - Algorithm**.
 
-### <a name="other_examples_example2"></a>Example: Tiny undirected graph
+### <a name="other-examples-example2"></a>Example: Tiny undirected graph
 
 This example shows how to propagate the `positive`, `negative` and `neutral` 
 polarity over a tiny **undirected graph** of synonyms. This graph is shown below. 
@@ -211,7 +211,7 @@ The full Java code to reproduce this is example is available on
 
 This example is described in [[2]](#propor2011), on section **3 The Polarity Propagation Algorithm**.
 
-## <a name="other_examples_example3"></a>Example: Undirected graph of adjectives
+## <a name="other-examples-example3"></a>Example: Undirected graph of adjectives
 
 The full Java code to reproduce this is example is available on
 [ExamplePapel](src/pt/psantos/phd/polarity/propagation/examples/ExamplePapel.java).
