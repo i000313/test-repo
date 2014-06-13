@@ -173,7 +173,7 @@ In this graph:
 The full Java code to reproduce this is example is available on
 [ExampleTinyDirectedGraph.java](src/pt/psantos/phd/polarity/propagation/examples/ExampleTinyDirectedGraph.java#L149).
 
-This example is described on [[1]](#epia2011).
+This example is described in [[1]](#epia2011).
 
 ### Example: Tiny undirected graph
 
@@ -195,7 +195,7 @@ In this graph:
 The full Java code to reproduce this is example is available on
 [ExampleTinyUndirectedGraph](src/pt/psantos/phd/polarity/propagation/examples/ExampleTinyUndirectedGraph.java).
 
-This example is described on [[2]](#propor2011).
+This example is described in [[2]](#propor2011).
 
 ## Example: Small undirected graph of Portuguese adjectives
 
@@ -207,10 +207,10 @@ adjectives from [PAPEL](http://www.linguateca.pt/PAPEL/).
 
 # References
 
-1. <a name="epia2011"></a>Santos, A. P., Ramos, C., & Marques, N. C. (2011). Determining the Polarity of Words 
-through a Common Online Dictionary. In Proceedings of 15th Portuguese Conference 
-on Artificial on Artificial intelligence (EPIA 2011), volume 7026 of LNCS, 
-pp. 649-663. Lisbon, Portugal. Springer.
+1. <a name="epia2011"></a>Santos, A. P., Ramos, C., & Marques, N. C. (2011). 
+[Determining the Polarity of Words through a Common Online Dictionary](http://www.psantos.com.pt/files/trabalhos-academicos/publicacoes/2011EPIA_polarityOfWordsThroughCommonDictionary.pdf). 
+In Proceedings of 15th Portuguese Conference on Artificial on Artificial intelligence 
+(EPIA 2011), volume 7026 of LNCS, pp. 649-663. Lisbon, Portugal. Springer.
 
 2. <a name="propor2011"></a>Santos, A. P., Gonçalo Oliveira, H., Ramos, C., & Marques, N. C. (2012). 
 A Bootstrapping Algorithm for Learning the Polarity of Words. In Proceedings 
