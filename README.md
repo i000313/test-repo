@@ -173,6 +173,8 @@ In this graph:
 The full Java code to reproduce this is example is available on
 [ExampleTinyDirectedGraph.java](src/pt/psantos/phd/polarity/propagation/examples/ExampleTinyDirectedGraph.java#L149).
 
+[epia2011](#epia2011)
+
 ### Example: Tiny undirected graph
 
 This example shows how to propagate the `positive`, `negative` and `neutral` 
@@ -202,3 +204,10 @@ This example shows how to create an **undirect graph of synonyms** for Portugues
 adjectives from [PAPEL](http://www.linguateca.pt/PAPEL/).
 
 # References
+
+<a name="epia2011"></a> Santos, A. P., Ramos, C., & Marques, N. C. (2011). Determining the Polarity of Words 
+through a Common Online Dictionary. In Proceedings of 15th Portuguese Conference 
+on Artificial on Artificial intelligence (EPIA 2011), volume 7026 of LNCS, 
+pp. 649-663. Lisbon, Portugal. Springer.
+ 
+ 
