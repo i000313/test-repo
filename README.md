@@ -76,8 +76,8 @@ bad,-1
 common,0
 ```
 
-- Then, we create a graph file and save it as `examples/01-tiny-graph-english/graph-edges-utf8.txt`. 
-Sample of thhis file:
+- Then, we create a graph file and save it as [examples/01-tiny-graph-english/graph-edges-utf8.txt](examples/01-tiny-graph-english/graph-edges-utf8.txt). 
+Sample of this file:
 
 ```
 good SYN firm
@@ -89,6 +89,7 @@ bad SYN bastard
 bad SYN bush
 bad SYN bush-league
 bad SYN crummy
+(...)
 ```
 
 - Finally, we run the following command line:
