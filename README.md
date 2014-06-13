@@ -36,27 +36,27 @@ The implementation will output:
 This example tries to explain the mentioned concepts. Suppose that our goal is 
 to classify a set of words as `positive`, `negative` and `neutral` with a few effort.
 
-- First, we collect a bunch of *synonyms* and *antonyms* words from a 
+- **First**, we collect a bunch of *synonyms* and *antonyms* words from a 
 *dictionary*, *thesaurus* or *wordnet*. Then, we represent them as a graph. 
 Suposse that we collected the words shown in the following **undirect graph**.
 In this graph, a *dashed line* represents an **antonym** and a *solid line*
-represents a **synonym**. Note that this is a *disconnected graph*.
+represents a **synonym**. Note that this graph is a *disconnected graph*.
 
 ![tiny-undirected-graph-of-english-words](/docs/figures/ex01-undirected-graph-state-01.png)
 
-- Second, we manually classified the words **good** as `positive`, **bad** as `negative`, 
+- **Second**, we manually classified the words **good** as `positive`, **bad** as `negative`, 
 and **common** as `neutral`. This is shown in the following figure.
 
 ![tiny-undirected-graph-of-english-words](/docs/figures/ex01-undirected-graph-state-02.png)
 
-- Finally, by applying a **polarity propagation algorithm** we can automatically 
+- **Finally**, by applying a **polarity propagation algorithm** we can automatically 
 classify the remaining words. The result is the following graph.
 
 ![tiny-undirected-graph-of-english-words](/docs/figures/ex01-undirected-graph-state-03.png)
 
-As shown above, the result is a list of words classified as `positive` (green nodes), 
-`negative` (red nodes), `neutral` (gray nodes). This list of words can be see also
-in the file [examples/01-tiny-graph-english/dic-output.csv](examples/01-tiny-graph-english/dic-output.csv).
+**As result**, we got a list of words classified as `positive` (green nodes), 
+`negative` (red nodes), `neutral` (gray nodes), as shown on the above figure. 
+This list of words is also available in the file [examples/01-tiny-graph-english/dic-output.csv](examples/01-tiny-graph-english/dic-output.csv).
 
 Some observations:
 - In some cases we can end up with words classified also as `ambiguous` 
@@ -66,11 +66,14 @@ The latter happens with all nodes that are not connected to a classified node.
 word greater the probability of that word being correctly classified.
 
 
-# <a name="requirements"></a>Requirements
+# <a name="requirements"></a>Requirements & Downlod
 
-For running the application the following software must be installed:
+For running this application the following software must be installed:
 - `JRE (Java Runtime Environmen) 1.6` or higher;
 - Or `JDK (Java Development Kit)` 1.6 or higher.
+
+This application can be download [HERE](releases).
+
 
 # <a name="command-line"></a>Running in Command Line
 
