@@ -65,7 +65,7 @@ java -jar <path-to-the-application-jar> {mandatory-options} [optional-options]
 This example, shows how to reproduce the previous example in the command line, to
 classify a set of words as `positive`, `negative` and `neutral`. 
 
-1. We create a file with the word **good** classified as `positive`, **bad** 
+- First, we create a file with the word **good** classified as `positive`, **bad** 
 classified as `negative`, and the word **common** classified as `neutral`. 
 This file is saved as `examples/01-tiny-graph-english/seed-words-utf8.csv`.
 File content:
@@ -76,7 +76,7 @@ bad,-1
 common,0
 ```
 
-2. We create a graph file and save it as `examples/01-tiny-graph-english/graph-edges-utf8.txt`. 
+- Then, we create a graph file and save it as `examples/01-tiny-graph-english/graph-edges-utf8.txt`. 
 Sample of thhis file:
 
 ```
@@ -91,13 +91,13 @@ bad SYN bush-league
 bad SYN crummy
 ```
 
-3. Run the following command line:
+- Finally, we run the following command line:
 
 ```
 java -jar polarity-propagation-0.6.0.jar -s "examples/01-tiny-graph-english/seed-words-utf8.csv" -g "examples/01-tiny-graph-english/graph-edges-utf8.txt" -e "utf-8" -o "dic.csv"
 ```
 
-4. The application will output a list of words classified with their polarity, 
+The application will output a list of words classified with their polarity, 
 to the file `dic.csv`. 
 A sample of the **outputted csv file**, is the following:
 
