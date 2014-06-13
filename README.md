@@ -1,3 +1,16 @@
+# Table of Contents
+- Introduction
+ - EXAMPLE 1
+- Requirements
+- Runninf in Command Line
+ - EXAMPLE
+- Running Through the Java API
+- Other Examples
+ - Example: Tiny Directed Graph
+ - Example: Tiny undirected graph
+ - Example: Undirected graph of adjectives
+- References 
+ 
 # Introduction
 
 This is the implementation of two **polarity propagation algorithms** in Java. 
@@ -42,7 +55,7 @@ For running the application the following software must be installed:
 - `JRE (Java Runtime Environmen) 1.6` or higher;
 - Or `JDK (Java Development Kit)` 1.6 or higher.
 
-# Command Line
+# Runninf in Command Line
 
 The application can be run from the command line, by running:
 
@@ -126,7 +139,7 @@ insufficient,-,1,0,0,2
 lacking,-,1,0,0,2
 ```
 
-# Java API
+# Running Through the Java API
 
 The application can be called through a Java API. The previous example and previous
 command line can be reproduced by the following Java code:
@@ -198,7 +211,7 @@ The full Java code to reproduce this is example is available on
 
 This example is described in [[2]](#propor2011), on section **3 The Polarity Propagation Algorithm**.
 
-## Example: Small undirected graph of Portuguese adjectives
+## Example: Undirected graph of adjectives
 
 The full Java code to reproduce this is example is available on
 [ExamplePapel](src/pt/psantos/phd/polarity/propagation/examples/ExamplePapel.java).
