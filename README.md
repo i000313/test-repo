@@ -179,8 +179,7 @@ DirectedPseudograph<Word, LexicalRelation> finalGraph
 		= PolarityPropagation.propagate(initialGraph, seedWords);
 ```
 
-OUTPUT:
-
+**OUTPUT:**
 - Words `A, C, F` classified as `positive`;
 - Words `B, E, H, I` classified as `negative`;
 - Words `D, G` classified as `ambiguous` (they are simultaneously positive and negative).
@@ -192,12 +191,12 @@ polarity of the words `0, 1 and 2` over a tiny **undirected graph** of synonyms.
 
 ![tiny-undirected-graph-of-numbers-propor](/test-resources/figures/tiny-undirected-graph-of-numbers-propor.png)
 
-#### INPUT (*initial state* in the above figure):
+**INPUT (*initial state* in the above figure):**
 - An *undirected graph* of synonyms;
 - Word `0` classified as `positive`, `1` calssified as `negative`, and
 word `2` classified as `neutral`.
 
-#### OUTPUT (*final state* in the above figure):
+**OUTPUT (*final state* in the above figure):**
 - Word `0, 6, 8, 9, 10` classified as `positive`;
 - Word `1, 4` classified as `negative`;
 - Word `2, 3` classified as `neutral`;
