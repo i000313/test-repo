@@ -170,7 +170,7 @@ csv.write(finalGraph);
 
 # <a name="other-examples"></a>Other Examples
 
-### <a name="other-examples-example1"></a>ExampleTinyDirectedGraph.java - Tiny Directed Graph 
+### <a name="other-examples-example1"></a>ExampleTinyDirectedGraph.java 
 
 This example shows how to propagate the `positive` and `negative` over a tiny 
 **directed graph** of synonyms and antonymys. This graph is shown below. In this
@@ -190,7 +190,7 @@ The full Java code to reproduce this is example is available on
 This example is described in [[1]](#epia2011), on section **2.3 Intuitive and Simple 
 Polarity Propagation - Algorithm**.
 
-### <a name="other-examples-example2"></a>ExampleTinyUndirectedGraph.java - Tiny undirected graph
+### <a name="other-examples-example2"></a>ExampleTinyUndirectedGraph.java
 
 This example shows how to propagate the `positive`, `negative` and `neutral` 
 polarity over a tiny **undirected graph** of synonyms. This graph is shown below. 
@@ -212,7 +212,7 @@ The full Java code to reproduce this is example is available on
 
 This example is described in [[2]](#propor2011), on section **3 The Polarity Propagation Algorithm**.
 
-## <a name="other-examples-example3"></a>ExamplePapel.java - Undirected graph of adjectives
+## <a name="other-examples-example3"></a>ExamplePapel.java
 
 The full Java code to reproduce this is example is available on
 [ExamplePapel](src/pt/psantos/phd/polarity/propagation/examples/ExamplePapel.java).
@@ -227,7 +227,7 @@ adjectives from [PAPEL](http://www.linguateca.pt/PAPEL/).
 In Proceedings of 15th Portuguese Conference on Artificial on Artificial intelligence 
 (EPIA 2011), volume 7026 of LNCS, pp. 649-663. Lisbon, Portugal. Springer.
 
-2. <a name="propor2011"></a>Santos, A. P., Gonçalo Oliveira, H., Ramos, C., & Marques, N. C. (2012). 
+2. <a name="propor2011"></a>Santos, A. P., GonÃ§alo Oliveira, H., Ramos, C., & Marques, N. C. (2012). 
 [A Bootstrapping Algorithm for Learning the Polarity of Words](http://www.psantos.com.pt/files/trabalhos-academicos/publicacoes/2012PROPOR_bootstrappingAlgorithm.pdf). 
 In Proceedings of 10th International Conference - Computational Processing of the Portuguese 
 Language (PROPOR 2012), volume 7243 of LNCS, pp. 229-234. Coimbra, Portugal. 
