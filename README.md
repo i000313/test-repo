@@ -196,7 +196,7 @@ In this graph:
 The full Java code to reproduce this is example is available on
 [ExampleTinyUndirectedGraph](src/pt/psantos/phd/polarity/propagation/examples/ExampleTinyUndirectedGraph.java).
 
-This example is described in [[2]](#propor2011).
+This example is described in [[2]](#propor2011), on section **3 The Polarity Propagation Algorithm**.
 
 ## Example: Small undirected graph of Portuguese adjectives
 
