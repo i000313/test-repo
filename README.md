@@ -173,7 +173,7 @@ In this graph:
 The full Java code to reproduce this is example is available on
 [ExampleTinyDirectedGraph.java](src/pt/psantos/phd/polarity/propagation/examples/ExampleTinyDirectedGraph.java#L149).
 
-### Example - Tiny undirected graph
+### Example: Tiny undirected graph
 
 This example shows how to propagate the `positive`, `negative` and `neutral` 
 polarity over a tiny **undirected graph** of synonyms. This graph is shown below. 
@@ -190,6 +190,15 @@ In this graph:
 - `5, 7` are classified as `ambiguous` (they are simultaneously positive and negative);
 - `11, 12` end up with `no polarity`.
 
-The full code can be seen in the file [ExampleTinyUndirectedGraph](src/pt/psantos/phd/polarity/propagation/examples/ExampleTinyUndirectedGraph.java).
+The full Java code to reproduce this is example is available on
+[ExampleTinyUndirectedGraph](src/pt/psantos/phd/polarity/propagation/examples/ExampleTinyUndirectedGraph.java).
+
+## Example: Small undirected graph of Portuguese adjectives
+
+The full Java code to reproduce this is example is available on
+[ExamplePapel](src/pt/psantos/phd/polarity/propagation/examples/ExamplePapel.java).
+
+This example shows how to create an **undirect graph of synonyms** for Portuguese 
+adjectives from [PAPEL](http://www.linguateca.pt/PAPEL/).
 
 # References
