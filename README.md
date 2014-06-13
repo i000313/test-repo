@@ -160,7 +160,7 @@ csv.write(finalGraph);
 
 This example shows how to propagate the `positive` and `negative` over a tiny 
 **directed graph** of synonyms and antonymys. This graph is shown below. In this
-graph **A** is classified as `positive` and **B** as `negative` (graph on the *initial state*).
+graph **A** is classified as `positive` and **B** as `negative` (graph shown on the *initial state*).
 
 ![tiny-directed-graph-of-letters-epia](/test-resources/figures/tiny-directed-graph-of-letters-epia.png)
 
@@ -176,21 +176,19 @@ The full Java code to reproduce this is example is available on
 ### Example - Tiny undirected graph
 
 This example shows how to propagate the `positive`, `negative` and `neutral` 
-polarity of the words `0, 1 and 2` over a tiny **undirected graph** of synonyms.
+polarity over a tiny **undirected graph** of synonyms. This graph is shown below. 
+In this graph `0, 1` and `2` are classified as `positive`, `negative` and `neutral` 
+respectively (graph shown on the *initial state*).
 
 ![tiny-undirected-graph-of-numbers-propor](/test-resources/figures/tiny-undirected-graph-of-numbers-propor.png)
 
-**INPUT (*initial state* in the above figure):**
-- An *undirected graph* of synonyms;
-- Word `0` classified as `positive`, `1` calssified as `negative`, and
-word `2` classified as `neutral`.
-
-**OUTPUT (*final state* in the above figure):**
-- Word `0, 6, 8, 9, 10` classified as `positive`;
-- Word `1, 4` classified as `negative`;
-- Word `2, 3` classified as `neutral`;
-- Word `5, 7` classified as `ambiguous` (they are simultaneously positive and negative);
-- Word `11, 12` end up with `no polarity`.
+After applying a propagation algorithm, we get the graph shown on its *final state*.
+In this graph:
+- `0, 6, 8, 9, 10` are classified as `positive`;
+- `1, 4` are classified as `negative`;
+- `2, 3` are classified as `neutral`;
+- `5, 7` are classified as `ambiguous` (they are simultaneously positive and negative);
+- `11, 12` end up with `no polarity`.
 
 The full code can be seen in the file [ExampleTinyUndirectedGraph](src/pt/psantos/phd/polarity/propagation/examples/ExampleTinyUndirectedGraph.java).
 
