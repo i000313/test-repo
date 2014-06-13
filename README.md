@@ -24,17 +24,17 @@ dictionary, thesaurus or wordnet. Then, we built the following **undirect graph*
 In this graph, a *dashed line* represents an **antonym** and a *solid line*
 represents a **synonym**. 
 
-![tiny-undirected-graph-of-english-words](/test-resources/figures/ex01-undirected-graph-state-01.png)
+![tiny-undirected-graph-of-english-words](/docs/figures/ex01-undirected-graph-state-01.png)
 
 Them, we manually classified the words: `good` as **positive**, `bad` as **negative**, 
 and `common` as **neutral**. This is shown in the following figure.
 
-![tiny-undirected-graph-of-english-words](/test-resources/figures/ex01-undirected-graph-state-02.png)
+![tiny-undirected-graph-of-english-words](/docs/figures/ex01-undirected-graph-state-02.png)
 
 Finally, by applying a **polarity propagation algorithm** we can automatically 
 classify the remaining words.
 
-![tiny-undirected-graph-of-english-words](/test-resources/figures/ex01-undirected-graph-state-03.png)
+![tiny-undirected-graph-of-english-words](/docs/figures/ex01-undirected-graph-state-03.png)
 
 # Requirements
 
@@ -162,7 +162,7 @@ This example shows how to propagate the `positive` and `negative` over a tiny
 **directed graph** of synonyms and antonymys. This graph is shown below. In this
 graph **A** is classified as `positive` and **B** as `negative` (graph shown on the *initial state*).
 
-![tiny-directed-graph-of-letters-epia](/test-resources/figures/tiny-directed-graph-of-letters-epia.png)
+![tiny-directed-graph-of-letters-epia](/docs/figures/tiny-directed-graph-of-letters-epia.png)
 
 After applying a propagation algorithm, we get the graph shown on its *final state*.
 In this graph:
@@ -183,7 +183,7 @@ polarity over a tiny **undirected graph** of synonyms. This graph is shown below
 In this graph `0, 1` and `2` are classified as `positive`, `negative` and `neutral` 
 respectively (graph shown on the *initial state*).
 
-![tiny-undirected-graph-of-numbers-propor](/test-resources/figures/tiny-undirected-graph-of-numbers-propor.png)
+![tiny-undirected-graph-of-numbers-propor](/docs/figures/tiny-undirected-graph-of-numbers-propor.png)
 
 After applying a propagation algorithm, we get the graph shown on its *final state*.
 In this graph:
