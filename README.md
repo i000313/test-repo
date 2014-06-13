@@ -36,23 +36,26 @@ The implementation will output:
 This example tries to explain the mentioned concepts. Suppose that our goal is 
 to classify a set of words as `positive`, `negative` and `neutral` with a few effort.
 
-First, we collect a bunch of *synonyms* and *antonyms* words from a 
-*dictionary*, *thesaurus* or *wordnet*. Then, we built the following **undirect graph**
-(and *disconnected graph*).
+- First, we collect a bunch of *synonyms* and *antonyms* words from a 
+*dictionary*, *thesaurus* or *wordnet*. Then, we represent them as a graph. 
+Suposse that we collected the words shown in the following **undirect graph**.
 In this graph, a *dashed line* represents an **antonym** and a *solid line*
-represents a **synonym**. 
+represents a **synonym**. Note that this is a *disconnected graph*.
 
 ![tiny-undirected-graph-of-english-words](/docs/figures/ex01-undirected-graph-state-01.png)
 
-Them, we manually classified the words: `good` as **positive**, `bad` as **negative**, 
-and `common` as **neutral**. This is shown in the following figure.
+- Second, we manually classified the words **good** as `positive`, **bad** as `negative`, 
+and **common** as `neutral`. This is shown in the following figure.
 
 ![tiny-undirected-graph-of-english-words](/docs/figures/ex01-undirected-graph-state-02.png)
 
-Finally, by applying a **polarity propagation algorithm** we can automatically 
+- Finally, by applying a **polarity propagation algorithm** we can automatically 
 classify the remaining words.
 
 ![tiny-undirected-graph-of-english-words](/docs/figures/ex01-undirected-graph-state-03.png)
+
+The result is a list of words classified as `positive` (green nodes), `negative`
+(red nodes), `neutral` (gray nodes).
 
 Some observations:
 - 
