@@ -1,9 +1,9 @@
 # Table of Contents
 - [Introduction](#intro)
- - [EXAMPLE 1](#into_example)
+ - [EXAMPLE 1](#intro-example)
 - [Requirements](#requirements)
-- [Running in Command Line](#comand_line)
- - [EXAMPLE](#comand_line_example)
+- [Running in Command Line](#command_line)
+ - [EXAMPLE](#command_line_example)
 - [Running through the Java API](#java_api)
 - [Other Examples](#other_examples)
  - [Example: Tiny Directed Graph](#other_examples_example1)
@@ -26,7 +26,7 @@ In both cases it is required:
 Then the application will output the words of the graph classified as `positive`, 
 `negative`, `neutral`, `ambiguous`, and `unknown`.
 
-### <a name="intro_example"></a>EXAMPLE 1
+### <a name="intro-example"></a>EXAMPLE 1
 
 This example tries to explain the mentioned concepts. Suppose that our gool is 
 to classify a set of words as `positive`, `negative` and `neutral` with a few effort.
