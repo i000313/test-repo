@@ -2,39 +2,46 @@
 
 This is the implementation of two **polarity propagation algorithms** in Java. 
 These algorithms allows us to classify a set of words as `positive`, `negative`
-and `neutral`.
+and `neutral` starting with a small set of words.
 
 The application can be run from the **command line** and through a **Java API**.
 In both cases it is required:
 
 - A set of words classified as `positive` and `negative` (and optionally as `neutral`);
-- A graph of unclassified words. In this graph, a node represents a word and
-a edge represents a **sysnonym** or an **antonymy** between two words.
+- A graph of **sysnonyms** and **antonymys** (optional) words, multiwords or synsets.
 
-As output one gets the graph nodes classified as `positive`, `negative`, `neutral`,
-`ambiguous`, and `unknown`.
+Then the application will output the words of the graph classified as `positive`, 
+`negative`, `neutral`, `ambiguous`, and `unknown`.
 
 ### EXAMPLE 1
 
-Suppose that we have collected from a dictionary, thesaurus or wordnet a bunch of 
-words with their synonyms and antonyms. Then, we built the following graph. In this
-initial graph words are not yet classified with a polarity.
+This example tries to explain the mentioned concepts. Suppose that our gool is 
+to classify a set of words as `positive`, `negative` and `neutral` with a few effort.
+
+First, we collect a bunch of words with their *synonyms* and *antonyms* from a 
+dictionary, thesaurus or wordnet. Then, we built the following **undirect graph**
+(and *disconnected graph*).
+In this graph, a *dashed line* represents an **antonym** and a *solid line*
+represents a **synonym**. 
 
 ![tiny-undirected-graph-of-english-words](/test-resources/figures/ex01-undirected-graph-state-01.png)
 
-Them, we manually classified the word `good` as **positive**, `bad` as **negative**, 
-and `common` as **neutral**.
+Them, we manually classified the words: `good` as **positive**, `bad` as **negative**, 
+and `common` as **neutral**. This is shown in the following figure.
 
 ![tiny-undirected-graph-of-english-words](/test-resources/figures/ex01-undirected-graph-state-02.png)
 
-Finally, by applying a **polarity propagation algorithm**  we can automatically 
+Finally, by applying a **polarity propagation algorithm** we can automatically 
 classify the remaining words.
 
 ![tiny-undirected-graph-of-english-words](/test-resources/figures/ex01-undirected-graph-state-03.png)
 
 # Requirements
 
-- Java JDK or JRE 1.6 or higher
+For running the application the following software must be installed:
+- JRE (Java Runtime Environmen) 1.6 or higher;
+or 
+- JDK (Java Development Kit) 1.6 or higher.
 
 # Command Line
 
