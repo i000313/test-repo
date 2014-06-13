@@ -162,28 +162,16 @@ This example shows how to propagate the `positive` and `negative` over a tiny
 **directed graph** of synonyms and antonymys. This graph is shown below. In this
 graph **A** is classified as `positive` and **B** as `negative` (graph on the *initial state*).
 
-After applying a propagation algorithm, we get the graph shown on its *final state*.
-
 ![tiny-directed-graph-of-letters-epia](/test-resources/figures/tiny-directed-graph-of-letters-epia.png)
 
-The full code can be seen in the file [ExampleTinyDirectedGraph.java](src/pt/psantos/phd/polarity/propagation/examples/ExampleTinyDirectedGraph.java#L149).
+After applying a propagation algorithm, we get the graph shown on its *final state*.
+In this graph:
+- `A, C, F` are classified as `positive`;
+- `B, E, H, I` are classified as `negative`;
+- `D, G` are classified as `ambiguous` (they are simultaneously `positive` and `negative`).
 
-```java
-// Loads the example data
-ExampleTinyDirectedGraph exampleData = new ExampleTinyDirectedGraph();
-DirectedPseudograph<Word, LexicalRelation> initialGraph = exampleData.createDirectedGraph();
-// Get word "A" and "B" classified as positive and negative respectively
-List<Word> seedWords = exampleData.getSeedWords();
-
-// Applies the propagation algorithm over the directed graph
-DirectedPseudograph<Word, LexicalRelation> finalGraph 
-		= PolarityPropagation.propagate(initialGraph, seedWords);
-```
-
-**OUTPUT:**
-- Words `A, C, F` classified as `positive`;
-- Words `B, E, H, I` classified as `negative`;
-- Words `D, G` classified as `ambiguous` (they are simultaneously positive and negative).
+The full Java code to reproduce this is example is available on
+[ExampleTinyDirectedGraph.java](src/pt/psantos/phd/polarity/propagation/examples/ExampleTinyDirectedGraph.java#L149).
 
 ### Example - Tiny undirected graph
 
