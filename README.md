@@ -1,5 +1,5 @@
 # Table of Contents
-- Introduction
+- [Introduction](#intro)
  - EXAMPLE 1
 - Requirements
 - Runninf in Command Line
@@ -11,7 +11,7 @@
  - Example: Undirected graph of adjectives
 - References 
  
-# Introduction
+# <a name="intro"><a>Introduction
 
 This is the implementation of two **polarity propagation algorithms** in Java. 
 These algorithms allows us to classify a set of words as `positive`, `negative`
