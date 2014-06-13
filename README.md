@@ -136,7 +136,7 @@ java -jar polarity-propagation-0.6.0.jar -s "examples/01-tiny-graph-english/seed
 ```
 
 The result of the above command is a list of words classified with their polarity.
-This list of words is saved as[examples/01-tiny-graph-english/dic-output.csv](examples/01-tiny-graph-english/dic-output.csv). 
+This list of words is saved as [examples/01-tiny-graph-english/dic-output.csv](examples/01-tiny-graph-english/dic-output.csv). 
 A sample of the **outputted csv file**, is the following:
 
 ```
@@ -164,14 +164,14 @@ lacking,-,1,0,0,2
 ```
 
 Observations:
-- Running the application from the command line create always an `undirected graph`.
+- Running the application from the command line creates always an `undirected graph`.
 This is what one wants most of the time because the synonyms and antonyms relations 
 are symmetric (e.g. if *good* is snynonym of *valid* then *valid* is synonym of *good*).
-For creating a directed graph one must use the Java API. 
+Using the Java we can choose between creating a `directed` or an `undirected` graph. 
 
 # <a name="java-api"></a>Running through the Java API
 
-The application can be called through a Java API. The previous example and previous
+The application can be called through the Java API. The previous example and previous
 command line can be reproduced by the following Java code:
 
 ```java
