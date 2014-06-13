@@ -16,7 +16,7 @@
 
 This is the implementation of two **polarity propagation algorithms** [[1]](#epia2011) 
 [[2]](#propor2011) in Java. 
-These algorithms allows us to classify a set of words, multiwords or synsets 
+These algorithms allows us to classify a set of *words*, *multiwords* and *synsets* 
 as `positive`, `negative` and `neutral` starting with a small set of those items.
 
 This implementation can be run from the **command line** and through a **Java API**.
@@ -24,18 +24,20 @@ In both cases it is required as input:
 
 - **A set of seed items**. This is an initial set of *words*, *multiwords*, or *synsets* 
 classified as `positive` and `negative` (and optionally as `neutral`);
-- A graph of **sysnonyms** and **antonymys** (optional) words, multiwords or synsets.
+- **A set of relations**. This is set of **sysnonyms** and **antonymys** (optional) 
+*words*, *multiwords* or *synsets*, that are used to build a graph.
 
-The implementationoutput:
-- The items of the graph, classified as `positive`, `negative`, `neutral`, `ambiguous`, and `unknown`.
+The implementation will output:
+- A list of items, classified as `positive`, `negative`, `neutral`, `ambiguous`, and `unknown`.
+These items are the *words*, *multiwords* or *synsets*.
 
 ### <a name="intro-example"></a>Example
 
 This example tries to explain the mentioned concepts. Suppose that our goal is 
 to classify a set of words as `positive`, `negative` and `neutral` with a few effort.
 
-First, we collect a bunch of words with their *synonyms* and *antonyms* from a 
-dictionary, thesaurus or wordnet. Then, we built the following **undirect graph**
+First, we collect a bunch of *synonyms* and *antonyms* words from a 
+*dictionary*, *thesaurus* or *wordnet*. Then, we built the following **undirect graph**
 (and *disconnected graph*).
 In this graph, a *dashed line* represents an **antonym** and a *solid line*
 represents a **synonym**. 
