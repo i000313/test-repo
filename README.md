@@ -58,7 +58,12 @@ As shown above, the result is a list of words classified as `positive` (green no
 `negative` (red nodes), `neutral` (gray nodes).
 
 Some observations:
-- ddd
+- In some cases we can end up with words classified also as `ambiguous` 
+(words with more than one polarity and `unknown` (words with polarity not set). 
+The latter happens with all nodes that are not connected to a classified node.
+- Generally, the smaller the distance between a non seed words and the closest seed 
+word greater the probability of that word being correctly classified.
+
 
 # <a name="requirements"></a>Requirements
 
