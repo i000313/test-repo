@@ -234,4 +234,4 @@ Language (PROPOR 2012), volume 7243 of LNCS, pp. 229-234. Coimbra, Portugal.
 Springer.
  
 # <a name="license"></a>License
-- ![Licence](LICENSE)
+- [Licence](LICENSE)
