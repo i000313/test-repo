@@ -207,7 +207,7 @@ adjectives from [PAPEL](http://www.linguateca.pt/PAPEL/).
 
 # References
 
-<a name="epia2011"></a>1. Santos, A. P., Ramos, C., & Marques, N. C. (2011). Determining the Polarity of Words 
+1. <a name="epia2011"></a>Santos, A. P., Ramos, C., & Marques, N. C. (2011). Determining the Polarity of Words 
 through a Common Online Dictionary. In Proceedings of 15th Portuguese Conference 
 on Artificial on Artificial intelligence (EPIA 2011), volume 7026 of LNCS, 
 pp. 649-663. Lisbon, Portugal. Springer.
