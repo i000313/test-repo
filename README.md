@@ -95,11 +95,11 @@ bad SYN crummy
 - Finally, we run the following command line:
 
 ```
-java -jar polarity-propagation-0.6.0.jar -s "examples/01-tiny-graph-english/seed-words-utf8.csv" -g "examples/01-tiny-graph-english/graph-edges-utf8.txt" -e "utf-8" -o "dic.csv"
+java -jar polarity-propagation-0.6.0.jar -s "examples/01-tiny-graph-english/seed-words-utf8.csv" -g "examples/01-tiny-graph-english/graph-edges-utf8.txt" -e "utf-8" -o "examples/01-tiny-graph-english/dic-output.csv"
 ```
 
 The application will output a list of words classified with their polarity, 
-to the file `dic.csv`. 
+to the file [examples/01-tiny-graph-english/dic-output.csv](examples/01-tiny-graph-english/dic-output.csv). 
 A sample of the **outputted csv file**, is the following:
 
 ```
