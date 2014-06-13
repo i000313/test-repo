@@ -67,7 +67,7 @@ classify a set of words as `positive`, `negative` and `neutral`.
 
 - First, we create a file with the word **good** classified as `positive`, **bad** 
 classified as `negative`, and the word **common** classified as `neutral`. 
-This file is saved as `examples/01-tiny-graph-english/seed-words-utf8.csv`.
+This file is saved as [examples/01-tiny-graph-english/seed-words-utf8.csv](examples/01-tiny-graph-english/seed-words-utf8.csv).
 File content:
 
 ```
