@@ -99,7 +99,7 @@ java -jar <path-to-the-application-jar> {mandatory-options} [optional-options]
 | -o &lt;file_name&gt; | optional   | Output file.
 | -e encoding    | optional   | Caracter encoding of all the files.
 
-NOTE: options -g | -u | -s are are mutually exclusive. Choose just one. 
+NOTE: options -g, -u and -s are are mutually exclusive. Specify just one. 
 
 ### <a name="command-line-example"></a>Example
 
@@ -165,13 +165,7 @@ deficient,-,1,0,0,2
 inadequate,-,1,0,0,2
 insufficient,-,1,0,0,2
 lacking,-,1,0,0,2
-```
-
-Observations:
-- Running the application from the command line creates always an `undirected graph`.
-This is what one wants most of the time because the synonyms and antonyms relations 
-are symmetric (e.g. if *good* is snynonym of *valid* then *valid* is synonym of *good*).
-Using the Java we can choose between creating a `directed` or an `undirected` graph. 
+``` 
 
 # <a name="java-api"></a>Running through the Java API
 
