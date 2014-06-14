@@ -92,10 +92,13 @@ java -jar <path-to-the-application-jar> {mandatory-options} [optional-options]
 | Option         | Type 	  | Description
 | -------------- | ---------- | -----------
 | -h             | optional   | help
-| -s &lt;file_name&gt; | mandatory  | Seed words file name
-| -g &lt;file_name&gt; | mandatory  | Graph file name
-| -o &lt;file_name&gt; | optional   | Output file name
-| -e encoding    | optional   | Caracter encoding of all the files
+| -s &lt;file_name&gt; | mandatory  | Seed words file.
+| -g &lt;file_name&gt; | mandatory  | Graph file. Load it as an undirected graph.
+| -u &lt;file_name&gt; | mandatory | Same as -g
+| -d &lt;file_name&gt; | mandatory | Graph file. Load it as a directed graph.
+| -o &lt;file_name&gt; | optional   | Output file.
+| -e encoding    | optional   | Caracter encoding of all the files.
+| NOTE: -g | -u | -s are are mutually exclusive. Choose just one. |
 
 ### <a name="command-line-example"></a>Example
 
