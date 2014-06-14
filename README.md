@@ -98,7 +98,8 @@ java -jar <path-to-the-application-jar> {mandatory-options} [optional-options]
 | -d &lt;file_name&gt; | mandatory | Graph file. Load it as a directed graph.
 | -o &lt;file_name&gt; | optional   | Output file.
 | -e encoding    | optional   | Caracter encoding of all the files.
-| NOTE: -g | -u | -s are are mutually exclusive. Choose just one. |
+
+NOTE: options -g | -u | -s are are mutually exclusive. Choose just one. 
 
 ### <a name="command-line-example"></a>Example
 
