@@ -1,7 +1,7 @@
 # Table of Contents
 - [Introduction](#intro)
+  - [Introductory Example](#intro-example)
 - [Run the Application](#run-app")
-   - [Introductory Example](#intro-example)
  - [Requirements & Download](#requirements)
  - [Running in Command Line](#command-line)
  - [Example](#command-line-example)
@@ -30,20 +30,6 @@ or *synsets* manually classified, and automatically classify a bigger set of wor
 `positive`, `negative` or even `neutral`.
 The set of words produced by these algorithms, may be useful, for example, 
 for building a dictionary of sentiment words for [Sentiment Analysis / Opinion Mining](http://en.wikipedia.org/wiki/Sentiment_analysis).
-
-# <a name="run-app"></a>Run the Application
- 
-This implementation can be run from the **command line** and through a **Java API**.
-In both cases it is required as input:
-
-- **A set of seed items**. This is an initial set of *words*, *multiwords*, or *synsets* 
-classified as `positive` and `negative` (and optionally as `neutral`);
-- **A set of relations between items**. This is set of **synonyms** and **antonymys** 
-(optional) *words*, *multiwords* or *synsets* that we want to classify. These 
-relations are used to build a graph.
-
-The implementation will output:
-- A list of items classified as `positive`, `negative`, `neutral`, `ambiguous`, and `unknown`.
 
 ### <a name="intro-example"></a>Introductory Example 
 
@@ -79,6 +65,19 @@ The latter happens with all nodes that are not connected to a classified node.
 - Generally, the smaller the distance between a non seed words and the closest seed 
 word greater the probability of that word being correctly classified.
 
+# <a name="run-app"></a>Run the Application
+ 
+This implementation can be run from the **command line** and through a **Java API**.
+In both cases it is required as input:
+
+- **A set of seed items**. This is an initial set of *words*, *multiwords*, or *synsets* 
+classified as `positive` and `negative` (and optionally as `neutral`);
+- **A set of relations between items**. This is set of **synonyms** and **antonymys** 
+(optional) *words*, *multiwords* or *synsets* that we want to classify. These 
+relations are used to build a graph.
+
+The implementation will output:
+- A list of items classified as `positive`, `negative`, `neutral`, `ambiguous`, and `unknown`.
 
 ## <a name="requirements"></a>Requirements & Download
 
