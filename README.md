@@ -14,9 +14,16 @@
  
 # <a name="intro"></a>Introduction
 
-This is the implementation in Java of the **polarity propagation algorithms** 
-described on [[2]](#propor2012) in section **3. The Polarity Propagation Algorithm**. 
-These algorithms allows us to classify a set of *words*, *multiwords* and *synsets* 
+This is an implementation in Java of the **polarity propagation algorithm** 
+described on [[2]](#propor2012) in section **3. The Polarity Propagation Algorithm**,
+for classifying *words*, *multiwords* and *synsets* as `positive`, `negative` and 
+`neutral` based on an `undirected graph`.
+
+This implementation also allows running the algorithm described on [[1]](#epia2011),
+section "2.3 Simple and Intuitive Polarity Propagation - Algorithm",
+for classifying words as `positive` or `negative` based on a `direted graph`.
+ 
+This algorithm allows us to classify a set of *words*, *multiwords* and *synsets* 
 as `positive`, `negative` and `neutral` starting with a small set of those items.
 
 This implementation can be run from the **command line** and through a **Java API**.
@@ -30,6 +37,8 @@ relations are used to build a graph.
 
 The implementation will output:
 - A list of items classified as `positive`, `negative`, `neutral`, `ambiguous`, and `unknown`.
+
+NOTE: This implementation a
 
 ### <a name="intro-example"></a>Example
 
