@@ -233,14 +233,12 @@ This example shows how to propagate the `positive` and `negative` polarity of
 
 1. Starting with (graph shown on the *initial state*):
   - A directed graph;
-  - **A** classified as `positive` and **B** as `negative`. 
-2. The propagation algorithm is applied for getting the graph shown in the 
-figure on its *final state*.
-
-In the final graph:
-- `A, C, F` are classified as `positive`;
-- `B, E, H, I` are classified as `negative`;
-- `D, G` are classified as `ambiguous` (they are simultaneously `positive` and `negative`).
+  - `A` classified as `positive` and `B` classified as `negative`. 
+2. Applying the propagation algorithm.
+3. We get graph shown in the figure on its *final state*. In the final graph:
+  - `A, C, F` are classified as `positive`;
+  - `B, E, H, I` are classified as `negative`;
+  - `D, G` are classified as `ambiguous` (they are simultaneously `positive` and `negative`).
 
 The full Java code to reproduce this is example is available on
 [ExampleTinyDirectedGraph.java](src/pt/psantos/phd/polarity/propagation/examples/ExampleTinyDirectedGraph.java#L149).
@@ -253,31 +251,28 @@ This example is described in [[2]](#propor2012), on section **3 The Polarity Pro
 
 This example shows how to propagate the `positive`, `negative` and `neutral` 
 polarity over a tiny **undirected graph** of synonyms. This graph is shown below. 
-In this graph `0, 1` and `2` are classified as `positive`, `negative` and `neutral` 
-respectively (graph shown on the *initial state*).
 
-
-
-After applying a propagation algorithm, we get the graph shown on its *final state*.
-In this graph:
-- `0, 6, 8, 9, 10` are classified as `positive`;
-- `1, 4` are classified as `negative`;
-- `2, 3` are classified as `neutral`;
-- `5, 7` are classified as `ambiguous` (they are simultaneously positive and negative);
-- `11, 12` end up with `no polarity`.
+1. Starting with (graph shown on the *initial state*):
+  - `0, 1` and `2` classified as `positive`, `negative` and `neutral` 
+  respectively (graph shown on the *initial state*).
+2. Applying the propagation algorithm.
+3. We get graph shown in the figure on its *final state*. In the final graph: 
+  - `0, 6, 8, 9, 10` are classified as `positive`;
+  - `1, 4` are classified as `negative`;
+  - `2, 3` are classified as `neutral`;
+  - `5, 7` are classified as `ambiguous` (they are simultaneously positive and negative);
+  - `11, 12` end up with `no polarity`.
 
 The full Java code to reproduce this is example is available on
 [ExampleTinyUndirectedGraph](src/pt/psantos/phd/polarity/propagation/examples/ExampleTinyUndirectedGraph.java).
 
-
-
 ## <a name="other-examples-example3"></a>3.3 ExamplePapel.java
-
-The full Java code to reproduce this is example is available on
-[ExamplePapel](src/pt/psantos/phd/polarity/propagation/examples/ExamplePapel.java).
 
 This example shows how to create an **undirect graph of synonyms** for Portuguese 
 adjectives from [PAPEL](http://www.linguateca.pt/PAPEL/).
+
+The full Java code to reproduce this is example is available on
+[ExamplePapel](src/pt/psantos/phd/polarity/propagation/examples/ExamplePapel.java).
 
 <!--
 # Tips
