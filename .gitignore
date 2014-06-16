@@ -1,5 +1,6 @@
-/dist/*
-/lib/
+/dist/
+/lib/*.jar
+/lib/*.zip
 /nbproject/
 /build/
 build.xml
