@@ -212,8 +212,8 @@ SimpleGraph<Word, LexicalRelation> finalGraph =
 	PolarityPropagation.propagate(initialGraph, seedWords);
 
 //	Write the list of words to a csv file
-CsvOutput csv = new CsvOutput(new File("dic-output.csv"));
-csv.write(finalGraph);          
+CsvOutput csv = new CsvOutput(new File("examples/01-tiny-graph-english/dic-output.csv"));
+csv.write(finalGraph);   
 ```
 
 # <a name="other-examples"></a>3. Other Examples
