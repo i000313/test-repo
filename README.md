@@ -4,7 +4,7 @@
 - [Run the Application](#run-app")
  - [Requirements & Download](#requirements)
  - [Running in Command Line](#command-line)
- - [Example](#command-line-example)
+  - [Example](#command-line-example)
  - [Running through the Java API](#java-api)
 - [Other Examples](#other-examples)
  - [ExampleTinyDirectedGraph.java](#other-examples-example1)
@@ -33,12 +33,18 @@ for building a dictionary of sentiment words for [Sentiment Analysis / Opinion M
 
 ### <a name="intro-example"></a>Introductory Example 
 
-This example tries to explain the mentioned concepts. Suppose that our goal is 
-to classify a set of words as `positive`, `negative` and `neutral` with a few effort.
+This example tries to explain the goal, the input, and output of the mentioned algorithms. 
 
-- **First**, we collect a bunch of *synonyms* and *antonyms* words from a 
-*dictionary*, *thesaurus* or *wordnet*. Then, we represent them as a graph. 
-Suposse that we collected the words shown in the following **undirect graph**.
+Suppose that our goal is to classify a set of words as `positive`, `negative` and 
+`neutral` with a few effort.
+
+- **First**, we can collect the words that we want automatically classifying, 
+together with their *synonyms* and *antonyms*. We can collect this information from
+a *dictionary*, *thesaurus* or *wordnet*. 
+
+The file [examples/01-tiny-graph-english/graph-edges-utf8.txt](examples/01-tiny-graph-english/graph-edges-utf8.txt)
+shows the words that I collected from online dictionaries. This can be visualized
+on the next figure as an **undirect graph**.
 In this graph, a *dashed line* represents an **antonym** and a *solid line*
 represents a **synonym**. Note that this graph is a *disconnected graph*.
 
