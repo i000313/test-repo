@@ -1,7 +1,7 @@
 # Table of Contents
 - [1. Introduction](#intro)
   - [Introductory Example](#intro-example)
-- [2. Run the Application](#run-app")
+- [2. Run the Application](#run-app)
  - [2.1 Requirements & Download](#requirements)
  - [2.2 Running in Command Line](#command-line)
     - [Example](#command-line-example)
@@ -218,16 +218,26 @@ csv.write(finalGraph);
 
 # <a name="other-examples"></a>3. Other Examples
 
+These examples shown in the next subsections run from Java code. 
+They are available in the package [pt.psantos.phd.polarity.propagation.examples](/src/pt/psantos/phd/polarity/propagation/examples).
+
 ## <a name="other-examples-example1"></a>3.1 ExampleTinyDirectedGraph.java 
 
-This example shows how to propagate the `positive` and `negative` over a tiny 
-**directed graph** of synonyms and antonymys. This graph is shown below. In this
-graph **A** is classified as `positive` and **B** as `negative` (graph shown on the *initial state*).
+This example implements the example described in [[1]](#epia2011), on section 
+**2.3 Intuitive and Simple Polarity Propagation - Algorithm**.
 
 ![tiny-directed-graph-of-letters-epia](/docs/figures/tiny-directed-graph-of-letters-epia.png)
 
-After applying a propagation algorithm, we get the graph shown on its *final state*.
-In this graph:
+This example shows how to propagate the `positive` and `negative` polarity of 
+**A** and **B** over a tiny **directed graph** of synonyms and antonymys. 
+
+1. Starting with (graph shown on the *initial state*):
+- A directed graph;
+- **A** classified as `positive` and **B** as `negative`. 
+2. The propagation algorithm is applied for getting the graph shown in the 
+figure on its *final state*.
+
+In the final graph:
 - `A, C, F` are classified as `positive`;
 - `B, E, H, I` are classified as `negative`;
 - `D, G` are classified as `ambiguous` (they are simultaneously `positive` and `negative`).
@@ -235,17 +245,18 @@ In this graph:
 The full Java code to reproduce this is example is available on
 [ExampleTinyDirectedGraph.java](src/pt/psantos/phd/polarity/propagation/examples/ExampleTinyDirectedGraph.java#L149).
 
-This example is described in [[1]](#epia2011), on section **2.3 Intuitive and Simple 
-Polarity Propagation - Algorithm**.
-
 ## <a name="other-examples-example2"></a>3.2 ExampleTinyUndirectedGraph.java
+
+This example is described in [[2]](#propor2012), on section **3 The Polarity Propagation Algorithm**.
+
+![tiny-undirected-graph-of-numbers-propor](/docs/figures/tiny-undirected-graph-of-numbers-propor.png)
 
 This example shows how to propagate the `positive`, `negative` and `neutral` 
 polarity over a tiny **undirected graph** of synonyms. This graph is shown below. 
 In this graph `0, 1` and `2` are classified as `positive`, `negative` and `neutral` 
 respectively (graph shown on the *initial state*).
 
-![tiny-undirected-graph-of-numbers-propor](/docs/figures/tiny-undirected-graph-of-numbers-propor.png)
+
 
 After applying a propagation algorithm, we get the graph shown on its *final state*.
 In this graph:
@@ -258,7 +269,7 @@ In this graph:
 The full Java code to reproduce this is example is available on
 [ExampleTinyUndirectedGraph](src/pt/psantos/phd/polarity/propagation/examples/ExampleTinyUndirectedGraph.java).
 
-This example is described in [[2]](#propor2012), on section **3 The Polarity Propagation Algorithm**.
+
 
 ## <a name="other-examples-example3"></a>3.3 ExamplePapel.java
 
