@@ -24,9 +24,11 @@ section "*2.3 Simple and Intuitive Polarity Propagation - Algorithm*",
 for classifying words as `positive` or `negative` based on a **direted graph**.
 
 
-This algorithm allows us to classify a set of *words*, *multiwords* and *synsets* 
-as `positive`, `negative` and `neutral` starting with a small set of those items.
+<br/>In both algorithms, the goal is to start with a small set of *words*, *multiwords*
+or *synsets* manually classified, and automatically classify a bigger set of words as 
+`positive`, `negative` or even `neutral`.
 
+ 
 This implementation can be run from the **command line** and through a **Java API**.
 In both cases it is required as input:
 
