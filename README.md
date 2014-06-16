@@ -4,7 +4,7 @@
 - [Run the Application](#run-app")
  - [Requirements & Download](#requirements)
  - [Running in Command Line](#command-line)
-  - [Example](#command-line-example)
+    - [Example](#command-line-example)
  - [Running through the Java API](#java-api)
 - [Other Examples](#other-examples)
  - [ExampleTinyDirectedGraph.java](#other-examples-example1)
