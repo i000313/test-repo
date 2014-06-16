@@ -1,8 +1,9 @@
 # Table of Contents
 - [1. Introduction](#intro)
-  - [Introductory Example](#intro-example)
+    - [Introductory Example](#intro-example)
+  - [1.1 Requirements & Download](#requirements)
 - [2. Run the Application](#run-app)
- - [2.1 Requirements & Download](#requirements)
+ - [2.1 Running the GUI](#gui)
  - [2.2 Running in Command Line](#command-line)
     - [Example](#command-line-example)
  - [2.3 Running through the Java API](#java-api)
@@ -73,10 +74,28 @@ Some observations:
 (words with more than one polarity at same time) and `unknown` (words with polarity not set). 
 The latter happens with all nodes that are not connected to a classified node.
 
+## <a name="requirements"></a>1.1 Requirements & Download
+
+### 1.1.1 Download
+
+The binary files can be downloaded by clicking on the link `release`
+at the top of this page. The application run on Windows/Linux/Mac OS and so on 
+(see the next section "requirements").
+
+### 1.1.2 Requirements
+
+If you downloaded the binary files you just need to have installed:
+- `JRE (Java Runtime Environmen) 1.6` or higher;
+- Or `JDK (Java Development Kit)` 1.6 or higher.
+
+If you downloaded the source code, you also need to download and set on you project:
+- The `jgrapht-core-0.9.0.jar` file from http://jgrapht.org/.
+
+
 # <a name="run-app"></a>2. Run the Application
  
-This implementation can be run from the **command line** and through a **Java API**.
-In both cases it is required as input:
+This implementation can be run from a **gui (graphical user interface)**, 
+**command line** and through a **Java API**. In all cases it is required as input:
 
 - **A set of seed items**. This is an initial set of *words*, *multiwords*, or *synsets* 
 classified as `positive` and `negative` (and optionally as `neutral`);
@@ -87,22 +106,18 @@ relations are used to build a graph.
 The implementation will output:
 - A list of items classified as `positive`, `negative`, `neutral`, `ambiguous`, and `unknown`.
 
-## <a name="requirements"></a>2.1 Requirements & Download
+## <a name="gui"></a>2.1 Running the GUI
 
-### 2.1.1 Download
+For opening the graphical user interface (GUI) double click in the `polarity-propagation-X.X.X.jar` 
+(X.X.X stands for the number version) jar file. 
+If the double click didn't work on your Operating System, open a *command line/terminal* and type:
 
-The binary files can be downloaded by clicking on the link `release`
-at the top of this page. The application run on Windows/Linux/Mac OS and so on 
-(see the next section "requirements").
+```
+java -jar polarity-propagation-X.X.X.jar
+```
+(X.X.X must be replaced by the application version that you are trying to run) 
 
-### 2.1.2 Requirements
-
-If you downloaded the binary files you just need to have installed:
-- `JRE (Java Runtime Environmen) 1.6` or higher;
-- Or `JDK (Java Development Kit)` 1.6 or higher.
-
-If you downloaded the source code, you also need to download and set on you project:
-- The jgrapht-core-0.9.0.jar file from http://jgrapht.org/.
+![Grapical user interface](/docs/figures/gui-0.6.0.png)
 
 ## <a name="command-line"></a>2.2 Running in Command Line
 
