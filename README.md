@@ -15,14 +15,15 @@
 # <a name="intro"></a>Introduction
 
 This is an implementation in Java of the **polarity propagation algorithm** 
-described on [[2]](#propor2012) in section **3. The Polarity Propagation Algorithm**,
+described on [[1]](#propor2012), section *"3. The Polarity Propagation Algorithm"*,
 for classifying *words*, *multiwords* and *synsets* as `positive`, `negative` and 
-`neutral` based on an `undirected graph`.
+`neutral` based on an **undirected graph**.
 
-This implementation also allows running the algorithm described on [[1]](#epia2011),
-section "2.3 Simple and Intuitive Polarity Propagation - Algorithm",
-for classifying words as `positive` or `negative` based on a `direted graph`.
- 
+This implementation also allows running the algorithm described on [[2]](#epia2011),
+section "*2.3 Simple and Intuitive Polarity Propagation - Algorithm*",
+for classifying words as `positive` or `negative` based on a **direted graph**.
+
+
 This algorithm allows us to classify a set of *words*, *multiwords* and *synsets* 
 as `positive`, `negative` and `neutral` starting with a small set of those items.
 
@@ -258,16 +259,17 @@ adjectives from [PAPEL](http://www.linguateca.pt/PAPEL/).
 
 # <a name="references"></a>References
 
-1. <a name="epia2011"></a>Santos, A. P., Ramos, C., & Marques, N. C. (2011). 
-[Determining the Polarity of Words through a Common Online Dictionary](http://www.psantos.com.pt/files/trabalhos-academicos/publicacoes/2011EPIA_polarityOfWordsThroughCommonDictionary.pdf). 
-In Proceedings of 15th Portuguese Conference on Artificial on Artificial intelligence 
-(EPIA 2011), volume 7026 of LNCS, pp. 649-663. Lisbon, Portugal. Springer.
-
-2. <a name="propor2012"></a>Santos, A. P., Gonçalo Oliveira, H., Ramos, C., & Marques, N. C. (2012). 
+1. <a name="propor2012"></a>Santos, A. P., Gonçalo Oliveira, H., Ramos, C., & Marques, N. C. (2012). 
 [A Bootstrapping Algorithm for Learning the Polarity of Words](http://www.psantos.com.pt/files/trabalhos-academicos/publicacoes/2012PROPOR_bootstrappingAlgorithm.pdf). 
 In Proceedings of 10th International Conference - Computational Processing of the Portuguese 
 Language (PROPOR 2012), volume 7243 of LNCS, pp. 229-234. Coimbra, Portugal. 
 Springer.
- 
+
+2. <a name="epia2011"></a>Santos, A. P., Ramos, C., & Marques, N. C. (2011). 
+[Determining the Polarity of Words through a Common Online Dictionary](http://www.psantos.com.pt/files/trabalhos-academicos/publicacoes/2011EPIA_polarityOfWordsThroughCommonDictionary.pdf). 
+In Proceedings of 15th Portuguese Conference on Artificial on Artificial intelligence 
+(EPIA 2011), volume 7026 of LNCS, pp. 649-663. Lisbon, Portugal. Springer.
+
+
 # <a name="license"></a>License
 - [Licence](LICENSE)
