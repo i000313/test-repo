@@ -24,9 +24,11 @@ section "*2.3 Simple and Intuitive Polarity Propagation - Algorithm*",
 for classifying words as `positive` or `negative` based on a **direted graph**.
 
 
-<br/>The list of words produced by these algorithms, may be useful, for example, 
-for building a dictionary of sentiment words for [Sentiment Analysis / Opinion Mining](http://en.wikipedia.org/wiki/Sentiment_analysis). 
-
+<br/>In both algorithms, the goal is to start with a small set of *words*, *multiwords*
+or *synsets* manually classified, and automatically classify a bigger set of words as 
+`positive`, `negative` or even `neutral`.
+The list of words produced by these algorithms, may be useful, for example, 
+for building a dictionary of sentiment words for [Sentiment Analysis / Opinion Mining](http://en.wikipedia.org/wiki/Sentiment_analysis).
  
 This implementation can be run from the **command line** and through a **Java API**.
 In both cases it is required as input:
