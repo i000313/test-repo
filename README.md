@@ -14,8 +14,8 @@
  
 # <a name="intro"></a>Introduction
 
-This is the implementation of two **polarity propagation algorithms** [[1]](#epia2011) 
-[[2]](#propor2011) in Java. 
+This is the implementation in Java of the **polarity propagation algorithms** 
+described on [[2]](#propor2012) in section **3. The Polarity Propagation Algorithm**. 
 These algorithms allows us to classify a set of *words*, *multiwords* and *synsets* 
 as `positive`, `negative` and `neutral` starting with a small set of those items.
 
@@ -237,7 +237,7 @@ In this graph:
 The full Java code to reproduce this is example is available on
 [ExampleTinyUndirectedGraph](src/pt/psantos/phd/polarity/propagation/examples/ExampleTinyUndirectedGraph.java).
 
-This example is described in [[2]](#propor2011), on section **3 The Polarity Propagation Algorithm**.
+This example is described in [[2]](#propor2012), on section **3 The Polarity Propagation Algorithm**.
 
 ## <a name="other-examples-example3"></a>ExamplePapel.java
 
@@ -254,7 +254,7 @@ adjectives from [PAPEL](http://www.linguateca.pt/PAPEL/).
 In Proceedings of 15th Portuguese Conference on Artificial on Artificial intelligence 
 (EPIA 2011), volume 7026 of LNCS, pp. 649-663. Lisbon, Portugal. Springer.
 
-2. <a name="propor2011"></a>Santos, A. P., Gonçalo Oliveira, H., Ramos, C., & Marques, N. C. (2012). 
+2. <a name="propor2012"></a>Santos, A. P., Gonçalo Oliveira, H., Ramos, C., & Marques, N. C. (2012). 
 [A Bootstrapping Algorithm for Learning the Polarity of Words](http://www.psantos.com.pt/files/trabalhos-academicos/publicacoes/2012PROPOR_bootstrappingAlgorithm.pdf). 
 In Proceedings of 10th International Conference - Computational Processing of the Portuguese 
 Language (PROPOR 2012), volume 7243 of LNCS, pp. 229-234. Coimbra, Portugal. 
