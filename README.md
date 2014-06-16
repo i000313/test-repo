@@ -1,10 +1,11 @@
 # Table of Contents
 - [Introduction](#intro)
- - [Example 1](#intro-example)
-- [Requirements & Download](#requirements)
-- [Running in Command Line](#command-line)
+- [Run the Application](#run-app")
+   - [Introductory Example](#intro-example)
+ - [Requirements & Download](#requirements)
+ - [Running in Command Line](#command-line)
  - [Example](#command-line-example)
-- [Running through the Java API](#java-api)
+ - [Running through the Java API](#java-api)
 - [Other Examples](#other-examples)
  - [ExampleTinyDirectedGraph.java](#other-examples-example1)
  - [ExampleTinyUndirectedGraph.java](#other-examples-example2)
@@ -27,8 +28,10 @@ for classifying words as `positive` or `negative` based on a **direted graph**.
 <br/>In both algorithms, the goal is to start with a small set of *words*, *multiwords*
 or *synsets* manually classified, and automatically classify a bigger set of words as 
 `positive`, `negative` or even `neutral`.
-The list of words produced by these algorithms, may be useful, for example, 
+The set of words produced by these algorithms, may be useful, for example, 
 for building a dictionary of sentiment words for [Sentiment Analysis / Opinion Mining](http://en.wikipedia.org/wiki/Sentiment_analysis).
+
+# <a name="run-app"></a>Run the Application
  
 This implementation can be run from the **command line** and through a **Java API**.
 In both cases it is required as input:
@@ -42,9 +45,7 @@ relations are used to build a graph.
 The implementation will output:
 - A list of items classified as `positive`, `negative`, `neutral`, `ambiguous`, and `unknown`.
 
-NOTE: This implementation a
-
-### <a name="intro-example"></a>Example
+### <a name="intro-example"></a>Introductory Example 
 
 This example tries to explain the mentioned concepts. Suppose that our goal is 
 to classify a set of words as `positive`, `negative` and `neutral` with a few effort.
@@ -79,7 +80,7 @@ The latter happens with all nodes that are not connected to a classified node.
 word greater the probability of that word being correctly classified.
 
 
-# <a name="requirements"></a>Requirements & Download
+## <a name="requirements"></a>Requirements & Download
 
 ### Requirements
 
@@ -92,7 +93,7 @@ For running this application the following software must be installed:
 The last version of this implementation can be download by clicking on the link `release`
 at the top of this page.
 
-# <a name="command-line"></a>Running in Command Line
+## <a name="command-line"></a>Running in Command Line
 
 The application can be run from the command line, by running:
 
