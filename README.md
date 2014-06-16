@@ -13,7 +13,7 @@
 - [References](#references)
 - [License](#license)
  
-# <a name="intro"></a>Introduction
+# <a name="intro"></a>1. Introduction
 
 This is an implementation in Java of the **polarity propagation algorithm** 
 described on [[1]](#propor2012), section *"3. The Polarity Propagation Algorithm"*,
@@ -38,7 +38,7 @@ This example tries to explain the goal, the input, and output of the mentioned a
 Suppose that our goal is to classify a set of words as `positive`, `negative` and 
 `neutral` with a few effort.
 
-- **First**, we can collect the words that we want automatically classifying, 
+- **First**, we can collect the words that we want to classify automatically, 
   together with their *synonyms* and *antonyms*. We can collect this information from
   a *dictionary*, *thesaurus* or *wordnet*. 
 
@@ -52,8 +52,8 @@ Suppose that our goal is to classify a set of words as `positive`, `negative` an
 
 - **Second**, we need to manually classify a set of words.
 
-  For this example, we have classified the words **good** as `positive`, **bad** as `negative`,  
-  and **common** as `neutral`. These words are saved on the file
+  For this example, we have classified the words **good** as `positive`, **bad** 
+  as `negative`, and **common** as `neutral`. These words are saved on the file
   [examples/01-tiny-graph-english/seed-words-utf8.csv](examples/01-tiny-graph-english/seed-words-utf8.csv)
   and are shown in the following figure with a different color.
 
@@ -66,16 +66,14 @@ the words not yet classified. The result of this step is shown in the following 
 
 **As result**, we got a list of words classified as `positive` (green nodes), 
 `negative` (red nodes), `neutral` (gray nodes), as shown on the above figure. 
-This list of words is available in the file [examples/01-tiny-graph-english/dic-output.csv](examples/01-tiny-graph-english/dic-output.csv).
+This list of words is also available in the file [examples/01-tiny-graph-english/dic-output.csv](examples/01-tiny-graph-english/dic-output.csv).
 
 Some observations:
 - In some cases we can end up with words classified also as `ambiguous` 
 (words with more than one polarity at same time) and `unknown` (words with polarity not set). 
 The latter happens with all nodes that are not connected to a classified node.
-- Generally, the smaller the distance between a non seed words and the closest seed 
-word greater the probability of that word being correctly classified.
 
-# <a name="run-app"></a>Run the Application
+# <a name="run-app"></a>2. Run the Application
  
 This implementation can be run from the **command line** and through a **Java API**.
 In both cases it is required as input:
@@ -89,20 +87,20 @@ relations are used to build a graph.
 The implementation will output:
 - A list of items classified as `positive`, `negative`, `neutral`, `ambiguous`, and `unknown`.
 
-## <a name="requirements"></a>Requirements & Download
+## <a name="requirements"></a>2.1 Requirements & Download
 
-### Requirements
+### 2.1.1 Requirements
 
 For running this application the following software must be installed:
 - `JRE (Java Runtime Environmen) 1.6` or higher;
 - Or `JDK (Java Development Kit)` 1.6 or higher.
 
-### Download
+### 2.1.2 Download
 
 The last version of this implementation can be download by clicking on the link `release`
 at the top of this page.
 
-## <a name="command-line"></a>Running in Command Line
+## <a name="command-line"></a>2.2 Running in Command Line
 
 The application can be run from the command line, by running:
 
@@ -190,7 +188,7 @@ insufficient,-,1,0,0,2
 lacking,-,1,0,0,2
 ``` 
 
-# <a name="java-api"></a>Running through the Java API
+## <a name="java-api"></a>2.3 Running through the Java API
 
 The application can be called through the Java API. The previous example and previous
 command line can be reproduced by the following Java code:
@@ -218,9 +216,9 @@ CsvOutput csv = new CsvOutput(new File("dic-output.csv"));
 csv.write(finalGraph);          
 ```
 
-# <a name="other-examples"></a>Other Examples
+# <a name="other-examples"></a>3. Other Examples
 
-### <a name="other-examples-example1"></a>ExampleTinyDirectedGraph.java 
+### <a name="other-examples-example1"></a>3.1 ExampleTinyDirectedGraph.java 
 
 This example shows how to propagate the `positive` and `negative` over a tiny 
 **directed graph** of synonyms and antonymys. This graph is shown below. In this
@@ -240,7 +238,7 @@ The full Java code to reproduce this is example is available on
 This example is described in [[1]](#epia2011), on section **2.3 Intuitive and Simple 
 Polarity Propagation - Algorithm**.
 
-### <a name="other-examples-example2"></a>ExampleTinyUndirectedGraph.java
+### <a name="other-examples-example2"></a>3.2 ExampleTinyUndirectedGraph.java
 
 This example shows how to propagate the `positive`, `negative` and `neutral` 
 polarity over a tiny **undirected graph** of synonyms. This graph is shown below. 
@@ -262,13 +260,20 @@ The full Java code to reproduce this is example is available on
 
 This example is described in [[2]](#propor2012), on section **3 The Polarity Propagation Algorithm**.
 
-## <a name="other-examples-example3"></a>ExamplePapel.java
+### <a name="other-examples-example3"></a>3.3 ExamplePapel.java
 
 The full Java code to reproduce this is example is available on
 [ExamplePapel](src/pt/psantos/phd/polarity/propagation/examples/ExamplePapel.java).
 
 This example shows how to create an **undirect graph of synonyms** for Portuguese 
 adjectives from [PAPEL](http://www.linguateca.pt/PAPEL/).
+
+<!--
+# Tips
+
+- Generally, the smaller the distance between a non seed words and the closest seed 
+word greater the probability of that word being correctly classified. 
+-->
 
 # <a name="references"></a>References
 
