@@ -42,27 +42,31 @@ Suppose that our goal is to classify a set of words as `positive`, `negative` an
   together with their *synonyms* and *antonyms*. We can collect this information from
   a *dictionary*, *thesaurus* or *wordnet*. 
 
-  The file [examples/01-tiny-graph-english/graph-edges-utf8.txt](examples/01-tiny-graph-english/graph-edges-utf8.txt)
-shows the words that I collected from online dictionaries. This can be visualized
-on the next figure as an **undirect graph**.
-In this graph, a *dashed line* represents an **antonym** and a *solid line*
-represents a **synonym**. Note that this graph is a *disconnected graph*.
+  For this example, we collected a few words from online dictionaries. These words
+  are saved in the file [examples/01-tiny-graph-english/graph-edges-utf8.txt](examples/01-tiny-graph-english/graph-edges-utf8.txt)
+  and are shown on the following figure as an **undirect graph**.
+  In this graph, a *dashed line* represents an **antonym** and a *solid line*
+  represents a **synonym**. Note that this graph is a *disconnected graph*.
 
 ![tiny-undirected-graph-of-english-words](/docs/figures/ex01-undirected-graph-state-01.png)
 
-- **Second**, we manually classified the words **good** as `positive`, **bad** as `negative`, 
-and **common** as `neutral`. This is shown in the following figure.
+- **Second**, we need to manually classify a set of words.
+
+  For this example, we have classified the words **good** as `positive`, **bad** as `negative`,  
+  and **common** as `neutral`. These words are saved on the file
+  [examples/01-tiny-graph-english/seed-words-utf8.csv](examples/01-tiny-graph-english/seed-words-utf8.csv)
+  and are shown in the following figure with a different color.
 
 ![tiny-undirected-graph-of-english-words](/docs/figures/ex01-undirected-graph-state-02.png)
 
-- **Finally**, by applying a **polarity propagation algorithm** we can automatically 
-classify the remaining words. The result is the following graph.
+- **Finally**, the **polarity propagation algorithm** can be applied to classify 
+the words not yet classified. The result of this step is shown in the following graph.
 
 ![tiny-undirected-graph-of-english-words](/docs/figures/ex01-undirected-graph-state-03.png)
 
 **As result**, we got a list of words classified as `positive` (green nodes), 
 `negative` (red nodes), `neutral` (gray nodes), as shown on the above figure. 
-This list of words is also available in the file [examples/01-tiny-graph-english/dic-output.csv](examples/01-tiny-graph-english/dic-output.csv).
+This list of words is available in the file [examples/01-tiny-graph-english/dic-output.csv](examples/01-tiny-graph-english/dic-output.csv).
 
 Some observations:
 - In some cases we can end up with words classified also as `ambiguous` 
