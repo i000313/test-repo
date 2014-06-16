@@ -232,8 +232,8 @@ This example shows how to propagate the `positive` and `negative` polarity of
 **A** and **B** over a tiny **directed graph** of synonyms and antonymys. 
 
 1. Starting with (graph shown on the *initial state*):
-- A directed graph;
-- **A** classified as `positive` and **B** as `negative`. 
+  - A directed graph;
+  - **A** classified as `positive` and **B** as `negative`. 
 2. The propagation algorithm is applied for getting the graph shown in the 
 figure on its *final state*.
 
