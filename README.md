@@ -89,16 +89,20 @@ The implementation will output:
 
 ## <a name="requirements"></a>2.1 Requirements & Download
 
-### 2.1.1 Requirements
+### 2.1.1 Download
 
-For running this application the following software must be installed:
+The binary files can be downloaded by clicking on the link `release`
+at the top of this page. The application run on Windows/Linux/Mac OS and so on 
+(see the next section "requirements").
+
+### 2.1.2 Requirements
+
+If you downloaded the binary files you just need to have installed:
 - `JRE (Java Runtime Environmen) 1.6` or higher;
 - Or `JDK (Java Development Kit)` 1.6 or higher.
 
-### 2.1.2 Download
-
-The last version of this implementation can be download by clicking on the link `release`
-at the top of this page.
+If you downloaded the source code, you also need to download and set on you project:
+- The jgrapht-core-0.9.0.jar file from http://jgrapht.org/.
 
 ## <a name="command-line"></a>2.2 Running in Command Line
 
