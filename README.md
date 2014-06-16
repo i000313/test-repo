@@ -1,15 +1,15 @@
 # Table of Contents
-- [Introduction](#intro)
+1. [Introduction](#intro)
   - [Introductory Example](#intro-example)
-- [Run the Application](#run-app")
- - [Requirements & Download](#requirements)
- - [Running in Command Line](#command-line)
+2. [Run the Application](#run-app")
+ 2.1 [Requirements & Download](#requirements)
+ 2.2 [Running in Command Line](#command-line)
     - [Example](#command-line-example)
- - [Running through the Java API](#java-api)
-- [Other Examples](#other-examples)
- - [ExampleTinyDirectedGraph.java](#other-examples-example1)
- - [ExampleTinyUndirectedGraph.java](#other-examples-example2)
- - [ExamplePapel.java](#other-examples-example3)
+ 2.3 [Running through the Java API](#java-api)
+3. [Other Examples](#other-examples)
+ 3.1 [ExampleTinyDirectedGraph.java](#other-examples-example1)
+ 3.2 [ExampleTinyUndirectedGraph.java](#other-examples-example2)
+ 3.3 [ExamplePapel.java](#other-examples-example3)
 - [References](#references)
 - [License](#license)
  
@@ -218,7 +218,7 @@ csv.write(finalGraph);
 
 # <a name="other-examples"></a>3. Other Examples
 
-### <a name="other-examples-example1"></a>3.1 ExampleTinyDirectedGraph.java 
+## <a name="other-examples-example1"></a>3.1 ExampleTinyDirectedGraph.java 
 
 This example shows how to propagate the `positive` and `negative` over a tiny 
 **directed graph** of synonyms and antonymys. This graph is shown below. In this
@@ -238,7 +238,7 @@ The full Java code to reproduce this is example is available on
 This example is described in [[1]](#epia2011), on section **2.3 Intuitive and Simple 
 Polarity Propagation - Algorithm**.
 
-### <a name="other-examples-example2"></a>3.2 ExampleTinyUndirectedGraph.java
+## <a name="other-examples-example2"></a>3.2 ExampleTinyUndirectedGraph.java
 
 This example shows how to propagate the `positive`, `negative` and `neutral` 
 polarity over a tiny **undirected graph** of synonyms. This graph is shown below. 
@@ -260,7 +260,7 @@ The full Java code to reproduce this is example is available on
 
 This example is described in [[2]](#propor2012), on section **3 The Polarity Propagation Algorithm**.
 
-### <a name="other-examples-example3"></a>3.3 ExamplePapel.java
+## <a name="other-examples-example3"></a>3.3 ExamplePapel.java
 
 The full Java code to reproduce this is example is available on
 [ExamplePapel](src/pt/psantos/phd/polarity/propagation/examples/ExamplePapel.java).
