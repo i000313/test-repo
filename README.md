@@ -223,7 +223,8 @@ They are available in the package [pt.psantos.phd.polarity.propagation.examples]
 
 ## <a name="other-examples-example1"></a>3.1 ExampleTinyDirectedGraph.java 
 
-This example implements the example described in [[1]](#epia2011), on section 
+This [ExampleTinyDirectedGraph.java](src/pt/psantos/phd/polarity/propagation/examples/ExampleTinyDirectedGraph.java#L149)
+example implements the example described in [[1]](#epia2011), on section 
 **2.3 Intuitive and Simple Polarity Propagation - Algorithm**.
 
 ![tiny-directed-graph-of-letters-epia](/docs/figures/tiny-directed-graph-of-letters-epia.png)
@@ -235,13 +236,10 @@ This example shows how to propagate the `positive` and `negative` polarity of
   - A directed graph;
   - `A` classified as `positive` and `B` classified as `negative`. 
 2. Applying the propagation algorithm.
-3. We get graph shown in the figure on its *final state*. In the final graph:
+3. We got the graph shown in the figure on its *final state*. In the final graph:
   - `A, C, F` are classified as `positive`;
   - `B, E, H, I` are classified as `negative`;
   - `D, G` are classified as `ambiguous` (they are simultaneously `positive` and `negative`).
-
-The full Java code to reproduce this is example is available on
-[ExampleTinyDirectedGraph.java](src/pt/psantos/phd/polarity/propagation/examples/ExampleTinyDirectedGraph.java#L149).
 
 ## <a name="other-examples-example2"></a>3.2 ExampleTinyUndirectedGraph.java
 
@@ -256,7 +254,7 @@ polarity over a tiny **undirected graph** of synonyms. This graph is shown below
   - `0, 1` and `2` classified as `positive`, `negative` and `neutral` 
   respectively (graph shown on the *initial state*).
 2. Applying the propagation algorithm.
-3. We get graph shown in the figure on its *final state*. In the final graph: 
+3. We got the graph shown in the figure on its *final state*. In the final graph: 
   - `0, 6, 8, 9, 10` are classified as `positive`;
   - `1, 4` are classified as `negative`;
   - `2, 3` are classified as `neutral`;
