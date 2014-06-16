@@ -3,7 +3,7 @@
     - [Introductory Example](#intro-example)
   - [1.1 Requirements & Download](#requirements)
 - [2. Run the Application](#run-app)
- - [2.1 Running the GUI](#gui)
+ - [2.1 GUI (Graphical User Interface)](#gui)
  - [2.2 Running in Command Line](#command-line)
     - [Example](#command-line-example)
  - [2.3 Running through the Java API](#java-api)
@@ -88,14 +88,13 @@ If you downloaded the binary files you just need to have installed:
 - `JRE (Java Runtime Environmen) 1.6` or higher;
 - Or `JDK (Java Development Kit)` 1.6 or higher.
 
-If you downloaded the source code, you also need to download and set on you project:
+If you downloaded the source code, you also need to download and set on your project:
 - The `jgrapht-core-0.9.0.jar` file from http://jgrapht.org/.
 
-
-# <a name="run-app"></a>2. Run the Application
+# <a name="run-app"></a>2. Running the Application
  
 This implementation can be run from a **gui (graphical user interface)**, 
-**command line** and through a **Java API**. In all cases it is required as input:
+**command line** and through a **Java API**. In all cases it is required as **input**:
 
 - **A set of seed items**. This is an initial set of *words*, *multiwords*, or *synsets* 
 classified as `positive` and `negative` (and optionally as `neutral`);
@@ -103,10 +102,10 @@ classified as `positive` and `negative` (and optionally as `neutral`);
 (optional) *words*, *multiwords* or *synsets* that we want to classify. These 
 relations are used to build a graph.
 
-The implementation will output:
+The implementation will **output**:
 - A list of items classified as `positive`, `negative`, `neutral`, `ambiguous`, and `unknown`.
 
-## <a name="gui"></a>2.1 Running the GUI
+## <a name="gui"></a>2.1 GUI (Graphical User Interface)
 
 For opening the graphical user interface (GUI) double click in the `polarity-propagation-X.X.X.jar` 
 (X.X.X stands for the number version) jar file. 
@@ -117,7 +116,12 @@ java -jar polarity-propagation-X.X.X.jar
 ```
 (X.X.X must be replaced by the application version that you are trying to run) 
 
+This procedure should open the following window:
 ![Grapical user interface](/docs/figures/gui-0.6.0.png)
+
+The content of the **seed words file** and **graph file** shown on the GUI are
+available at [examples/01-tiny-graph-english/seed-words-utf8.csv](examples/01-tiny-graph-english/seed-words-utf8.csv)
+and [examples/01-tiny-graph-english/graph-edges-utf8.txt](examples/01-tiny-graph-english/graph-edges-utf8.txt).
 
 ## <a name="command-line"></a>2.2 Running in Command Line
 
