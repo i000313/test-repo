@@ -42,7 +42,7 @@ Suppose that our goal is to classify a set of words as `positive`, `negative` an
   together with their *synonyms* and *antonyms*. We can collect this information from
   a *dictionary*, *thesaurus* or *wordnet*. 
 
-    The file [examples/01-tiny-graph-english/graph-edges-utf8.txt](examples/01-tiny-graph-english/graph-edges-utf8.txt)
+  The file [examples/01-tiny-graph-english/graph-edges-utf8.txt](examples/01-tiny-graph-english/graph-edges-utf8.txt)
 shows the words that I collected from online dictionaries. This can be visualized
 on the next figure as an **undirect graph**.
 In this graph, a *dashed line* represents an **antonym** and a *solid line*
