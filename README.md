@@ -16,11 +16,9 @@
  
 # <a name="intro"></a>1. Introduction
 
-<<<<<<< HEAD
-xxxx
-=======
-zzzz
->>>>>>> origin/master
+[img-from-gitpages](http://i000313.github.io/test-repo/images/sprite_download.png)
+
+[img-from-gitpages](i000313.github.io/test-repo/images/sprite_download.png)
 
 This is an implementation in Java of the **polarity propagation algorithm** 
 described on [[1]](#propor2012), section *"3. The Polarity Propagation Algorithm"*,
