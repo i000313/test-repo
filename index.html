@@ -1,36 +1,51 @@
 <!DOCTYPE html>
 <html>
-
   <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Test-repo : This my first repository. A test repository." />
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=640" />
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <link rel="stylesheet" href="stylesheets/core.css" media="screen"/>
+    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)"/>
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
 
-    <title>Test-repo</title>
+    <script type="text/javascript" src="javascripts/modernizr.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('#main_content').headsmart()
+      })
+    </script>
+    <title>Test-repo by i000313</title>
   </head>
 
   <body>
+    <a id="forkme_banner" href="https://github.com/i000313/test-repo">View on GitHub</a>
+    <div class="shell">
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/i000313/test-repo">View on GitHub</a>
+      <header>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <h1>Test-repo</h1>
+            <h2>This my first repository. A test repository.</h2>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+      </header>
 
-          <h1 id="project_title">Test-repo</h1>
-          <h2 id="project_tagline">This my first repository. A test repository.</h2>
+      <section id="downloads">
+        <span class="inner">
+          <a href="https://github.com/i000313/test-repo/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/i000313/test-repo/tarball/master" class="tgz"><em>download</em> .TGZ</a>
+        </span>
+      </section>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/i000313/test-repo/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/i000313/test-repo/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
+      <span class="banner-fix"></span>
+
+
+      <section id="main_content">
         <h1>
 <a name="table-of-contents" class="anchor" href="#table-of-contents"><span class="octicon octicon-link"></span></a>Table of Contents</h1>
 
@@ -111,7 +126,9 @@ represents a <strong>synonym</strong>. Note that this graph is a <em>disconnecte
 </li>
 </ul><p><img src="i000313.github.com/test-repo/docs/figures/ex01-undirected-graph-state-01.png" alt="tiny-undirected-graph-of-english-words"></p>
 
-<p><img src="images/arrow-down.png" alt="testtttt"></p>
+<p><img src="images/sprite_download.png" alt="testtttt"></p>
+
+<p><img src="https://github.com/i000313/test-repo/blob/gh-pages/images/sprite_download.png" alt="test-full-path"></p>
 
 <ul>
 <li>
@@ -470,17 +487,21 @@ In Proceedings of 15th Portuguese Conference on Artificial on Artificial intelli
 <li><a href="LICENSE">Licence</a></li>
 </ul>
       </section>
-    </div>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Test-repo maintained by <a href="https://github.com/i000313">i000313</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      <footer>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <p>this project by <a href="https://github.com/i000313">i000313</a> can be found on <a href="https://github.com/i000313/test-repo">GitHub</a></p>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+        <p>Generated with <a href="http://pages.github.com">GitHub Pages</a> using Merlot</p>
+        <span class="octocat"></span>
       </footer>
+
     </div>
 
     
-
   </body>
 </html>
