@@ -16,6 +16,8 @@
  
 # <a name="intro"></a>1. Introduction
 
+xxxx
+
 This is an implementation in Java of the **polarity propagation algorithm** 
 described on [[1]](#propor2012), section *"3. The Polarity Propagation Algorithm"*,
 for classifying *words*, *multiwords* and *synsets* as `positive`, `negative` and 
