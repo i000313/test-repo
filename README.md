@@ -49,7 +49,7 @@ Suppose that our goal is to classify a set of words as `positive`, `negative` an
   In this graph, a *dashed line* represents an **antonym** and a *solid line*
   represents a **synonym**. Note that this graph is a *disconnected graph*.
 
-![tiny-undirected-graph-of-english-words](/docs/figures/ex01-undirected-graph-state-01.png)
+![tiny-undirected-graph-of-english-words](docs/figures/ex01-undirected-graph-state-01.png)
 
 - **Second**, we need to manually classify a set of words.
 
