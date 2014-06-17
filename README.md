@@ -112,7 +112,7 @@ The application can run from the next Graphical User Interface.
 
 ![Grapical user interface](/docs/figures/gui-0.6.0.png)
 
-For running it is required to specify at least:
+For running the application, click on the button `Run Algorithm` after specifying at least:
 - A **seed words file** like the [examples/01-tiny-graph-english/seed-words-utf8.csv]
 file.
 - A **graph file** like the [examples/01-tiny-graph-english/graph-edges-utf8.txt](examples/01-tiny-graph-english/graph-edges-utf8.txt)

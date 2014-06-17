@@ -1,7 +1,8 @@
+/build/
 /dist/
 /lib/*.jar
 /lib/*.zip
 /nbproject/
-/build/
+/src/pt/psantos/phd/polarity/propagation/tests/
 build.xml
 manifest.mf
