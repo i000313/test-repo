@@ -8,4 +8,4 @@ A log of changes that are worth mentioning
 - The command line now supports arguments.
 
 # v0.5.0
-- First public release
+- First public release.
