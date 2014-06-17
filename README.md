@@ -16,7 +16,11 @@
  
 # <a name="intro"></a>1. Introduction
 
+<<<<<<< HEAD
 xxxx
+=======
+zzzz
+>>>>>>> origin/master
 
 This is an implementation in Java of the **polarity propagation algorithm** 
 described on [[1]](#propor2012), section *"3. The Polarity Propagation Algorithm"*,
