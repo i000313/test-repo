@@ -4,77 +4,44 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Test-repo by i000313</title>
-
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
     <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
   </head>
   <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/i000313/test-repo">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/i000313/test-repo/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/i000313/test-repo/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
     <div class="wrapper">
-      <header>
-        <h1>Test-repo</h1>
-        <p>This my first repository. A test repository.</p>
 
-        <p class="view"><a href="https://github.com/i000313/test-repo">View the Project on GitHub <small>i000313/test-repo</small></a></p>
-
-
-        <ul>
-          <li><a href="https://github.com/i000313/test-repo/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/i000313/test-repo/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/i000313/test-repo">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
       <section>
+        <div id="title">
+          <h1>Test-repo</h1>
+          <p>This my first repository. A test repository.</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/i000313">i000313</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
+
         <h1>
-<a name="table-of-contents" class="anchor" href="#table-of-contents"><span class="octicon octicon-link"></span></a>Table of Contents</h1>
+<a name="polarity-propagation-algorithm---implementation" class="anchor" href="#polarity-propagation-algorithm---implementation"><span class="octicon octicon-link"></span></a>Polarity Propagation Algorithm - Implementation</h1>
 
-<ul>
-<li>
-<a href="#intro">1. Introduction</a>
-
-<ul>
-<li><a href="#intro-example">Introductory Example</a></li>
-<li><a href="#requirements">1.1 Requirements &amp; Download</a></li>
-</ul>
-</li>
-<li>
-<a href="#run-app">2. Run the Application</a>
-
-<ul>
-<li><a href="#gui">2.1 GUI (Graphical User Interface)</a></li>
-<li>
-<a href="#command-line">2.2 Running in Command Line</a>
-
-<ul>
-<li><a href="#command-line-example">Example</a></li>
-</ul>
-</li>
-<li><a href="#java-api">2.3 Running through the Java API</a></li>
-</ul>
-</li>
-<li>
-<a href="#other-examples">3. Other Examples</a>
-
-<ul>
-<li><a href="#other-examples-example1">3.1 ExampleTinyDirectedGraph.java</a></li>
-<li><a href="#other-examples-example2">3.2 ExampleTinyUndirectedGraph.java</a></li>
-<li><a href="#other-examples-example3">3.3 ExamplePapel.java</a></li>
-</ul>
-</li>
-<li><a href="#references">References</a></li>
-<li><a href="#license">License</a></li>
-</ul><h1>
-<a name="1-introduction" class="anchor" href="#1-introduction"><span class="octicon octicon-link"></span></a>
-<a name="intro"></a>1. Introduction</h1>
-
-<p><a href="http://i000313.github.io/test-repo/images/sprite_download.png">img-from-gitpages</a></p>
-
-<p><img src="i000313.github.com/test-repo/img/sprite_download.png" alt="img-from-gitpages"></p>
-
-<p><img src="i000313.github.com/test-repo/images/sprite_download.png" alt="img-from-gitpages"></p>
+<p><img src="images/ex01-undirected-graph-state-03.png" alt="tiny-undirected-graph-of-english-words-img"></p>
 
 <p>This is an implementation in Java of the <strong>polarity propagation algorithm</strong> 
 described on <a href="#propor2012">[1]</a>, section <em>"3. The Polarity Propagation Algorithm"</em>,
@@ -91,363 +58,7 @@ or <em>synsets</em> manually classified, and automatically classify a bigger set
 The set of words produced by these algorithms, may be useful, for example, 
 for building a dictionary of sentiment words for <a href="http://en.wikipedia.org/wiki/Sentiment_analysis">Sentiment Analysis / Opinion Mining</a>.</p>
 
-<h3>
-<a name="introductory-example" class="anchor" href="#introductory-example"><span class="octicon octicon-link"></span></a>
-<a name="intro-example"></a>Introductory Example</h3>
-
-<p>This example tries to explain the goal, the input, and output of the mentioned algorithms. </p>
-
-<p>Suppose that our goal is to classify a set of words as <code>positive</code>, <code>negative</code> and 
-<code>neutral</code> with a few effort.</p>
-
-<ul>
-<li>
-<p><strong>First</strong>, we can collect the words that we want to classify automatically, 
-together with their <em>synonyms</em> and <em>antonyms</em>. We can collect this information from
-a <em>dictionary</em>, <em>thesaurus</em> or <em>wordnet</em>. </p>
-
-<p>For this example, we collected a few words from online dictionaries. These words
-are saved in the file <a href="examples/01-tiny-graph-english/graph-edges-utf8.txt">examples/01-tiny-graph-english/graph-edges-utf8.txt</a>
-and are shown on the following figure as an <strong>undirect graph</strong>.
-In this graph, a <em>dashed line</em> represents an <strong>antonym</strong> and a <em>solid line</em>
-represents a <strong>synonym</strong>. Note that this graph is a <em>disconnected graph</em>.</p>
-</li>
-</ul><p><img src="docs/figures/ex01-undirected-graph-state-01.png" alt="tiny-undirected-graph-of-english-words"></p>
-
-<ul>
-<li>
-<p><strong>Second</strong>, we need to manually classify a set of words.</p>
-
-<p>For this example, we have classified the words <strong>good</strong> as <code>positive</code>, <strong>bad</strong> 
-as <code>negative</code>, and <strong>common</strong> as <code>neutral</code>. These words are saved on the file
-<a href="examples/01-tiny-graph-english/seed-words-utf8.csv">examples/01-tiny-graph-english/seed-words-utf8.csv</a>
-and are shown in the following figure with a different color.</p>
-</li>
-</ul><p><img src="/docs/figures/ex01-undirected-graph-state-02.png" alt="tiny-undirected-graph-of-english-words"></p>
-
-<ul>
-<li>
-<strong>Finally</strong>, the <strong>polarity propagation algorithm</strong> can be applied to classify 
-the words not yet classified. The result of this step is shown in the following graph.</li>
-</ul><p><img src="/docs/figures/ex01-undirected-graph-state-03.png" alt="tiny-undirected-graph-of-english-words"></p>
-
-<p><strong>As result</strong>, we got a list of words classified as <code>positive</code> (green nodes), 
-<code>negative</code> (red nodes), <code>neutral</code> (gray nodes), as shown on the above figure. 
-This list of words is also available in the file <a href="examples/01-tiny-graph-english/dic-output.csv">examples/01-tiny-graph-english/dic-output.csv</a>.</p>
-
-<p>Some observations:</p>
-
-<ul>
-<li>In some cases we can end up with words classified also as <code>ambiguous</code> 
-(words with more than one polarity at same time) and <code>unknown</code> (words with polarity not set). 
-The latter happens with all nodes that are not connected to a classified node.</li>
-</ul><h2>
-<a name="11-requirements--download" class="anchor" href="#11-requirements--download"><span class="octicon octicon-link"></span></a>
-<a name="requirements"></a>1.1 Requirements &amp; Download</h2>
-
-<h3>
-<a name="111-download" class="anchor" href="#111-download"><span class="octicon octicon-link"></span></a>1.1.1 Download</h3>
-
-<p>The binary files can be downloaded by clicking on the link <code>release</code>
-at the top of this page. The application run on Windows/Linux/Mac OS and so on 
-(see the requirements in the next section).</p>
-
-<h3>
-<a name="112-requirements" class="anchor" href="#112-requirements"><span class="octicon octicon-link"></span></a>1.1.2 Requirements</h3>
-
-<p>If you downloaded the binary files you just need to have installed:</p>
-
-<ul>
-<li>
-<code>JRE (Java Runtime Environmen) 1.6</code> or higher;</li>
-<li>Or <code>JDK (Java Development Kit)</code> 1.6 or higher.</li>
-</ul><p>If you downloaded the source code, you also need to download and set on your project:</p>
-
-<ul>
-<li>The <code>jgrapht-core-0.9.0.jar</code> file from <a href="http://jgrapht.org/">http://jgrapht.org/</a>.</li>
-</ul><h1>
-<a name="2-running-the-application" class="anchor" href="#2-running-the-application"><span class="octicon octicon-link"></span></a>
-<a name="run-app"></a>2. Running the Application</h1>
-
-<p>This implementation can be run from a <strong>gui (graphical user interface)</strong>, 
-<strong>command line</strong> and through a <strong>Java API</strong>. In all cases it is required as <strong>input</strong>:</p>
-
-<ul>
-<li>
-<strong>A set of seed items</strong>. This is an initial set of <em>words</em>, <em>multiwords</em>, or <em>synsets</em> 
-classified as <code>positive</code> and <code>negative</code> (and optionally as <code>neutral</code>);</li>
-<li>
-<strong>A set of relations between items</strong>. This is set of <strong>synonyms</strong> and <strong>antonymys</strong> 
-(optional) <em>words</em>, <em>multiwords</em> or <em>synsets</em> that we want to classify. These 
-relations are used to build a graph.</li>
-</ul><p>The implementation will <strong>output</strong>:</p>
-
-<ul>
-<li>A list of items, each one classified as <code>positive</code>, <code>negative</code>, <code>neutral</code>, <code>ambiguous</code> 
-(item with more than one polarity), and <code>unknown</code> (item with polarity not set).</li>
-</ul><h2>
-<a name="21-gui-graphical-user-interface" class="anchor" href="#21-gui-graphical-user-interface"><span class="octicon octicon-link"></span></a>
-<a name="gui"></a>2.1 GUI (Graphical User Interface)</h2>
-
-<p>The application can run from the next Graphical User Interface.</p>
-
-<p><img src="/docs/figures/gui-0.6.0.png" alt="Grapical user interface"></p>
-
-<p>For running the application, click on the button <code>Run Algorithm</code> after specifying at least:</p>
-
-<ul>
-<li>A <strong>seed words file</strong> like the [examples/01-tiny-graph-english/seed-words-utf8.csv]
-file.</li>
-<li>A <strong>graph file</strong> like the <a href="examples/01-tiny-graph-english/graph-edges-utf8.txt">examples/01-tiny-graph-english/graph-edges-utf8.txt</a>
-file.</li>
-</ul><p>For opening the graphical user interface (GUI) double click in the <code>polarity-propagation-X.X.X.jar</code> 
-(X.X.X stands for the number version) jar file. 
-If the double click didn't work on your Operating System, open a <em>command line/terminal</em> and type:</p>
-
-<pre><code>java -jar polarity-propagation-X.X.X.jar
-</code></pre>
-
-<p>(X.X.X must be replaced by the application version that you are trying to run)</p>
-
-<h2>
-<a name="22-running-in-command-line" class="anchor" href="#22-running-in-command-line"><span class="octicon octicon-link"></span></a>
-<a name="command-line"></a>2.2 Running in Command Line</h2>
-
-<p>The application can be run from the command line, by running:</p>
-
-<pre><code>java -jar &lt;path-to-the-application-jar&gt; {mandatory-options} [optional-options]
-</code></pre>
-
-<p><strong>Options:</strong></p>
-
-<table>
-<thead><tr>
-<th>Option</th>
-<th>Type</th>
-<th>Description</th>
-</tr></thead>
-<tbody>
-<tr>
-<td>-h</td>
-<td>optional</td>
-<td>help</td>
-</tr>
-<tr>
-<td>-s &lt;file_name&gt;</td>
-<td>mandatory</td>
-<td>Seed words file.</td>
-</tr>
-<tr>
-<td>-g &lt;file_name&gt;</td>
-<td>mandatory</td>
-<td>Graph file. Load it as an undirected graph.</td>
-</tr>
-<tr>
-<td>-u &lt;file_name&gt;</td>
-<td>mandatory</td>
-<td>Same as -g</td>
-</tr>
-<tr>
-<td>-d &lt;file_name&gt;</td>
-<td>mandatory</td>
-<td>Graph file. Load it as a directed graph.</td>
-</tr>
-<tr>
-<td>-o &lt;file_name&gt;</td>
-<td>optional</td>
-<td>Output file.</td>
-</tr>
-<tr>
-<td>-e encoding</td>
-<td>optional</td>
-<td>Caracter encoding of all the files.</td>
-</tr>
-</tbody>
-</table><p>NOTE: options -g, -u and -s are are mutually exclusive. Specify just one. </p>
-
-<h3>
-<a name="example" class="anchor" href="#example"><span class="octicon octicon-link"></span></a>
-<a name="command-line-example"></a>Example</h3>
-
-<p>This example, shows how to reproduce the previous example in the command line, to
-classify a set of words as <code>positive</code>, <code>negative</code> and <code>neutral</code>. </p>
-
-<ul>
-<li>First, we create a file with the word <strong>good</strong> classified as <code>positive</code>, <strong>bad</strong> 
-classified as <code>negative</code>, and the word <strong>common</strong> classified as <code>neutral</code>. 
-This file is available at <a href="examples/01-tiny-graph-english/seed-words-utf8.csv">examples/01-tiny-graph-english/seed-words-utf8.csv</a> 
-and its content is shown below:</li>
-</ul><pre><code>good,1
-bad,-1
-common,0
-</code></pre>
-
-<ul>
-<li>Then, we create a file of graph edges. A sample of this file is shown below.
-The full file is available at <a href="examples/01-tiny-graph-english/graph-edges-utf8.txt">examples/01-tiny-graph-english/graph-edges-utf8.txt</a>. </li>
-</ul><pre><code>good SYN firm
-good SYN hard
-good SYN informed
-good SYN just
-good ANT bad
-bad SYN bastard
-bad SYN bush
-bad SYN bush-league
-bad SYN crummy
-(...)
-</code></pre>
-
-<ul>
-<li>Finally, we run the following command line:</li>
-</ul><pre><code>java -jar polarity-propagation-0.6.0.jar -s "examples/01-tiny-graph-english/seed-words-utf8.csv" -g "examples/01-tiny-graph-english/graph-edges-utf8.txt" -e "utf-8" -o "examples/01-tiny-graph-english/dic-output.csv"
-</code></pre>
-
-<p>The result of the above command is a list of words classified with their polarity.
-This list of words is saved as <a href="examples/01-tiny-graph-english/dic-output.csv">examples/01-tiny-graph-english/dic-output.csv</a>. 
-A sample of the <strong>outputted csv file</strong>, is the following:</p>
-
-<pre><code>words,polarity,negativeCounter,neutralCounter,positiveCounter,iteration
-good,+,0,0,1,0
-commonsense,+,1,0,0,1
-commonsensible,+,0,0,1,1
-commonsensical,+,0,0,1,1
-firm,+,0,0,1,1
-hard,+,0,0,1,1
-(...)
-well-founded,+,0,0,3,1
-groundless,-,1,0,0,1
-illogical,-,3,0,0,1
-invalid,-,3,0,0,1
-irrational,-,3,0,0,1
-(...)
-weak,-,2,0,0,2
-fairish,+,0,0,1,2
-serviceable,+,0,0,1,2
-deficient,-,1,0,0,2
-inadequate,-,1,0,0,2
-insufficient,-,1,0,0,2
-lacking,-,1,0,0,2
-</code></pre>
-
-<h2>
-<a name="23-running-through-the-java-api" class="anchor" href="#23-running-through-the-java-api"><span class="octicon octicon-link"></span></a>
-<a name="java-api"></a>2.3 Running through the Java API</h2>
-
-<p>The application can be called through the Java API. The previous example and previous
-command line can be reproduced by the following Java code:</p>
-
-<div class="highlight highlight-java"><pre><span class="c1">// Read the graph from a file</span>
-<span class="n">TriplesLoader</span> <span class="n">loader</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">TriplesLoader</span><span class="o">();</span>
-<span class="n">SimpleGraph</span><span class="o">&lt;</span><span class="n">Word</span><span class="o">,</span> <span class="n">LexicalRelation</span><span class="o">&gt;</span> <span class="n">initialGraph</span> 
-        <span class="o">=</span> <span class="n">loader</span><span class="o">.</span><span class="na">load</span><span class="o">(</span>
-         <span class="k">new</span> <span class="nf">File</span><span class="o">(</span><span class="s">"examples/01-tiny-graph-english/graph-edges-utf8.txt"</span><span class="o">)</span>
-        <span class="o">,</span> <span class="s">"utf-8"</span><span class="o">);</span>
-
-<span class="c1">// Read the seed words from a file</span>
-<span class="n">SeedWordsLoader</span> <span class="n">seedWordsLoader</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">SeedWordsLoader</span><span class="o">();</span> 
-<span class="n">List</span><span class="o">&lt;</span><span class="n">Word</span><span class="o">&gt;</span> <span class="n">seedWords</span> <span class="o">=</span> <span class="n">seedWordsLoader</span><span class="o">.</span><span class="na">load</span><span class="o">(</span>
-         <span class="k">new</span> <span class="nf">File</span><span class="o">(</span><span class="s">"examples/01-tiny-graph-english/seed-words-utf8.csv"</span><span class="o">)</span>
-        <span class="o">,</span> <span class="s">"utf-8"</span><span class="o">);</span>
-
-<span class="c1">// Propagate the polarity from the seed words to the remaining words</span>
-<span class="n">SimpleGraph</span><span class="o">&lt;</span><span class="n">Word</span><span class="o">,</span> <span class="n">LexicalRelation</span><span class="o">&gt;</span> <span class="n">finalGraph</span> <span class="o">=</span> 
-    <span class="n">PolarityPropagation</span><span class="o">.</span><span class="na">propagate</span><span class="o">(</span><span class="n">initialGraph</span><span class="o">,</span> <span class="n">seedWords</span><span class="o">);</span>
-
-<span class="c1">//  Write the list of words to a csv file</span>
-<span class="n">CsvOutput</span> <span class="n">csv</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">CsvOutput</span><span class="o">(</span><span class="k">new</span> <span class="nf">File</span><span class="o">(</span><span class="s">"examples/01-tiny-graph-english/dic-output.csv"</span><span class="o">));</span>
-<span class="n">csv</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="n">finalGraph</span><span class="o">);</span>   
-</pre></div>
-
-<h1>
-<a name="3-other-examples" class="anchor" href="#3-other-examples"><span class="octicon octicon-link"></span></a>
-<a name="other-examples"></a>3. Other Examples</h1>
-
-<p>These examples shown in the next subsections run from Java code. 
-They are available in the package <a href="/src/pt/psantos/phd/polarity/propagation/examples">pt.psantos.phd.polarity.propagation.examples</a>.</p>
-
-<h2>
-<a name="31-exampletinydirectedgraphjava" class="anchor" href="#31-exampletinydirectedgraphjava"><span class="octicon octicon-link"></span></a>
-<a name="other-examples-example1"></a>3.1 ExampleTinyDirectedGraph.java</h2>
-
-<p>The <a href="src/pt/psantos/phd/polarity/propagation/examples/ExampleTinyDirectedGraph.java#L149">ExampleTinyDirectedGraph.java</a>
-file implements the example described in <a href="#epia2011">[1]</a>, on section 
-<strong>2.3 Intuitive and Simple Polarity Propagation - Algorithm</strong>.</p>
-
-<p><img src="/docs/figures/tiny-directed-graph-of-letters-epia.png" alt="tiny-directed-graph-of-letters-epia"></p>
-
-<p>This example shows how to propagate the <code>positive</code> and <code>negative</code> polarity of 
-<strong>A</strong> and <strong>B</strong> over a tiny <strong>directed graph</strong> of synonyms and antonymys. </p>
-
-<ol>
-<li>Starting with (graph shown on the <em>initial state</em>):
-
-<ul>
-<li>A directed graph;</li>
-<li>
-<code>A</code> classified as <code>positive</code> and <code>B</code> classified as <code>negative</code>. </li>
-</ul>
-</li>
-<li>Applying the propagation algorithm.</li>
-<li>We got the graph shown in the figure on its <em>final state</em>. In the final graph:
-
-<ul>
-<li>
-<code>A, C, F</code> are classified as <code>positive</code>;</li>
-<li>
-<code>B, E, H, I</code> are classified as <code>negative</code>;</li>
-<li>
-<code>D, G</code> are classified as <code>ambiguous</code> (they are simultaneously <code>positive</code> and <code>negative</code>).</li>
-</ul>
-</li>
-</ol><h2>
-<a name="32-exampletinyundirectedgraphjava" class="anchor" href="#32-exampletinyundirectedgraphjava"><span class="octicon octicon-link"></span></a>
-<a name="other-examples-example2"></a>3.2 ExampleTinyUndirectedGraph.java</h2>
-
-<p>The <a href="src/pt/psantos/phd/polarity/propagation/examples/ExampleTinyUndirectedGraph.java">ExampleTinyUndirectedGraph</a>
-file implements the example described in <a href="#propor2012">[2]</a>, on section 
-<strong>3 The Polarity Propagation Algorithm</strong>.</p>
-
-<p><img src="/docs/figures/tiny-undirected-graph-of-numbers-propor.png" alt="tiny-undirected-graph-of-numbers-propor"></p>
-
-<p>This example shows how to propagate the <code>positive</code>, <code>negative</code> and <code>neutral</code> 
-polarity over a tiny <strong>undirected graph</strong> of synonyms. This graph is shown below. </p>
-
-<ol>
-<li>Starting with (graph shown on the <em>initial state</em>):
-
-<ul>
-<li>
-<code>0, 1</code> and <code>2</code> classified as <code>positive</code>, <code>negative</code> and <code>neutral</code> 
-respectively (graph shown on the <em>initial state</em>).</li>
-</ul>
-</li>
-<li>Applying the propagation algorithm.</li>
-<li>We got the graph shown in the figure on its <em>final state</em>. In the final graph: 
-
-<ul>
-<li>
-<code>0, 6, 8, 9, 10</code> are classified as <code>positive</code>;</li>
-<li>
-<code>1, 4</code> are classified as <code>negative</code>;</li>
-<li>
-<code>2, 3</code> are classified as <code>neutral</code>;</li>
-<li>
-<code>5, 7</code> are classified as <code>ambiguous</code> (they are simultaneously positive and negative);</li>
-<li>
-<code>11, 12</code> end up with <code>no polarity</code>.</li>
-</ul>
-</li>
-</ol><h2>
-<a name="33-examplepapeljava" class="anchor" href="#33-examplepapeljava"><span class="octicon octicon-link"></span></a>
-<a name="other-examples-example3"></a>3.3 ExamplePapel.java</h2>
-
-<p>This example shows how to create an <strong>undirect graph of synonyms</strong> for Portuguese 
-adjectives from <a href="http://www.linguateca.pt/PAPEL/">PAPEL</a>.</p>
-
-<p>The full Java code to reproduce this is example is available on
-<a href="src/pt/psantos/phd/polarity/propagation/examples/ExamplePapel.java">ExamplePapel</a>.</p>
-
-
+<p>The source code, binaries and more information can be found in <a href="https://github.com/i000313/test-repo">https://github.com/i000313/test-repo</a>.</p>
 
 <h1>
 <a name="references" class="anchor" href="#references"><span class="octicon octicon-link"></span></a>
@@ -463,20 +74,11 @@ Springer.</p></li>
 <a href="http://www.psantos.com.pt/files/trabalhos-academicos/publicacoes/2011EPIA_polarityOfWordsThroughCommonDictionary.pdf">Determining the Polarity of Words through a Common Online Dictionary</a>. 
 In Proceedings of 15th Portuguese Conference on Artificial on Artificial intelligence 
 (EPIA 2011), volume 7026 of LNCS, pp. 649-663. Lisbon, Portugal. Springer.</p></li>
-</ol><h1>
-<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>
-<a name="license"></a>License</h1>
-
-<ul>
-<li><a href="LICENSE">Licence</a></li>
-</ul>
+</ol>
       </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/i000313">i000313</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
+
     </div>
-    <script src="javascripts/scale.fix.js"></script>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
     
   </body>
 </html>
