@@ -80,7 +80,7 @@ The latter happens with all nodes that are not connected to a classified node.
 
 The binary files can be downloaded by clicking on the link `release`
 at the top of this page. The application run on Windows/Linux/Mac OS and so on 
-(see the next section "requirements").
+(see the requirements in the next section).
 
 ### 1.1.2 Requirements
 
@@ -103,10 +103,21 @@ classified as `positive` and `negative` (and optionally as `neutral`);
 relations are used to build a graph.
 
 The implementation will **output**:
-- A list of items classified as `positive`, `negative`, `neutral`, `ambiguous`, and `unknown`.
+- A list of items, each one classified as `positive`, `negative`, `neutral`, `ambiguous` 
+(item with more than one polarity), and `unknown` (item with polarity not set).
 
 ## <a name="gui"></a>2.1 GUI (Graphical User Interface)
 
+The application can run from the next Graphical User Interface.
+
+![Grapical user interface](/docs/figures/gui-0.6.0.png)
+
+For running it is required to specify at least:
+- A **seed words file** like the [examples/01-tiny-graph-english/seed-words-utf8.csv]
+file.
+- A **graph file** like the [examples/01-tiny-graph-english/graph-edges-utf8.txt](examples/01-tiny-graph-english/graph-edges-utf8.txt)
+file.
+ 
 For opening the graphical user interface (GUI) double click in the `polarity-propagation-X.X.X.jar` 
 (X.X.X stands for the number version) jar file. 
 If the double click didn't work on your Operating System, open a *command line/terminal* and type:
@@ -114,14 +125,7 @@ If the double click didn't work on your Operating System, open a *command line/t
 ```
 java -jar polarity-propagation-X.X.X.jar
 ```
-(X.X.X must be replaced by the application version that you are trying to run) 
-
-This procedure should open the following window:
-![Grapical user interface](/docs/figures/gui-0.6.0.png)
-
-The content of the **seed words file** and **graph file** shown on the GUI are
-available at [examples/01-tiny-graph-english/seed-words-utf8.csv](examples/01-tiny-graph-english/seed-words-utf8.csv)
-and [examples/01-tiny-graph-english/graph-edges-utf8.txt](examples/01-tiny-graph-english/graph-edges-utf8.txt).
+(X.X.X must be replaced by the application version that you are trying to run)
 
 ## <a name="command-line"></a>2.2 Running in Command Line
 
